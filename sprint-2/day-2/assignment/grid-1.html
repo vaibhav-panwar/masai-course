@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-1</title>
+    <style>
+        #cont{
+            margin: 150px;
+            display: grid;
+            grid-template-columns:repeat(4,1fr);
+            grid-template-rows: repeat(3,70px);
+            width: 60%;
+            gap: 10px;
+        }
+        .a{
+            border: 1px solid black;
+            border-radius: 15px;
+            background-color: gray;
+            color: white;
+            padding-left: 20px;
+        }
+        #cont>:nth-child(1){
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        #cont>:nth-child(2){
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        #cont>:nth-child(4){
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+        #cont>:nth-child(5){
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <div class="a"><h1>A</h1></div>
+        <div class="a"><h1>B</h1></div>
+        <div class="a"><h1>C</h1></div>
+        <div class="a"><h1>D</h1></div>
+        <div class="a"><h1>E</h1></div>
+    </div>
+</body>
+</html>
