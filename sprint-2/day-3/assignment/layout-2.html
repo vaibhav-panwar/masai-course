@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        #cont{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+        }
+        .nav{
+            background-color: yellow;
+            width: 100%;
+            margin-bottom: 10px;
+            height: 70px;
+        }
+        .cont{
+            display: grid;
+            grid-template-columns: repeat(2,40%);
+            grid-template-rows: 300px;
+            gap: 20%;
+        }
+        .cont>:nth-child(1){
+            background-color: red;
+            color: azure;
+        }
+        .cont>:nth-child(2){
+            background-color: green;
+            color: azure;
+
+        }
+        @media all and (max-width:450px){
+            .cont{
+                grid-template-columns: 40%;
+                grid-template-rows: 150px 150px;
+            }
+            .nav{
+                width: 40%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <div class="nav">
+            <div><h1>Navigator</h1></p></div>
+        </div>
+        <div class="cont">
+            <div class="a"><p>Left Box</p></div>
+            <div class="a"><p>Right Box</p></div>
+        </div>
+    </div>
+</body>
+</html>

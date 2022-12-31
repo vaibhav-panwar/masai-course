@@ -1,0 +1,105 @@
+/* Write your styles here  */
+*{
+  margin: 0;padding: 0;
+}
+
+body {
+ margin: 0px 70px;
+}
+#header>h1{
+  text-align: center;
+  margin: 20px 0px;
+}
+#header>p{
+  text-align: center;
+  margin: 20px 0px;
+}
+#doctors{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 400px;
+  gap: 20px;
+}
+#doctors>div{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
+}
+#doctors img{
+  width: 100%;
+}
+#doctors h3{
+  text-align: center;
+  margin-top:  1.6420361247947455vh 0px;
+}
+#doctors h6{
+  text-align: center;
+  margin: 10px
+}
+#doctors p{
+  text-align: center;
+  margin: 20px 30px;
+}
+#doctors>div>div{
+  display: flex;
+  justify-content: space-around;
+}
+#doctors button{
+  width:  6.25vw;
+  height: 4.926108374384237vh;
+  border-radius: 20px;
+  border: 0px;
+}
+#doctors>div>div>:nth-child(1){
+  color:rgb(25, 120, 228);
+}
+#doctors>div>div>:nth-child(2){
+  color:white;
+  background-color: orange;
+}
+#service{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,32.84072249589491vh);
+  margin-top:  4.926108374384237vh;
+  gap:10px;
+  margin-left: 1.5625vw;
+  
+}
+#service>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#service h5{
+  margin-top:2.4630541871921183vh;
+}
+#service p{
+  margin:20px;
+  text-align: center;
+}
+ 
+
+/* keep media queries at the bottom */
+/* Medium screens */
+@media all and (min-width: 451px) and (max-width: 750px) {
+  #doctors{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,65.68144499178982vh);
+  }
+  #services{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,32.84072249589491vh);
+  }
+}
+/* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+  #doctors{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(4,65.68144499178982vh);
+  }
+  #services{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(4,32.84072249589491vh);
+  }
+}

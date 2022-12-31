@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cont{
+            display: flex;
+            flex-direction: column;
+        }
+        .nav{
+            width: 100%;
+            background-color: yellow;
+            margin-bottom: 20px;
+        }
+        #cont1{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,150px);
+            gap: 20px;
+        }
+        #cont1>:nth-child(1){
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            background-color: red;
+        }
+        #cont1>div{
+            background-color: green;
+            color: azure;
+        }
+        @media all and (min-width:451px) and (max-width:750px){
+            #cont1>:nth-child(1){
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            }
+            #cont1{
+                gap: 10px;
+                grid-template-rows: repeat(3,100px);
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+        @media all and (min-width:100px) and (max-width:450px){
+            #cont1>:nth-child(1){
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            }
+            #cont1{
+                gap: 10px;
+                grid-template-rows: repeat(6,100px);
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <div class="nav">
+            <h1>Navigation</h1>
+        </div>
+        <div id="cont1">
+            <div class="div"><h2>Left Box</h2></div>
+            <div class="div"><h2>Right Box-1</h2></div>
+            <div class="div"><h2>Right Box-2</h2></div>
+            <div class="div"><h2>Right Box-3</h2></div>
+        </div>
+    </div>
+</body>
+</html>
