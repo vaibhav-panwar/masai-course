@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+   <div>
+     <input type="text" placeholder="enter 1st number" id="ip1">
+     <input type="text" placeholder="enter 2nd number" id="ip2">
+   </div>
+   <div>
+    <button onclick="add();">Add</button>
+    <button onclick="Subtract();">Subtract</button>
+    <button onclick="Divide();">Divide</button>
+    <button onclick="Multiply();">Multiply</button>
+   </div>
+   <script>
+    let number1=document.getElementById("ip1");
+    let number2=document.getElementById("ip2");
+     function add(){
+        let x= +number1.value;
+        let y= +number2.value;
+        alert(x+y);
+     }
+     function Subtract(){
+        let x= +number1.value;
+        let y= +number2.value;
+        alert(x-y);
+     }
+     function Multiply(){
+        let x= +number1.value;
+        let y= +number2.value;
+        alert(x*y);
+     }
+     function Divide(){
+        let x= +number1.value;
+        let y= +number2.value;
+        alert(x/y);
+     }
+
+   </script>
+</body>
+</html>
