@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dominos</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+      .nav>div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 700px;
+        color: rgb(72, 72, 215);
+        font-weight: 600;
+      }
+      .nav>h1{
+        color: rgb(31, 31, 230);
+      }
+      .nav>button{
+        background-color: red;
+        color: white;
+        border: 0px;
+        height: 40px;
+        width: 100px;
+      }
+      .top{
+        margin: 20px 30px;
+      }
+      .top>h1{
+        margin-bottom: 10px;
+      }
+      .top>div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,350px);
+        color: white;
+        gap: 10px;
+      }
+      .top>div>div{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: red;
+      }
+      .top>div>div>img{
+        width: 50%;
+      }
+      .top>div>div>p{
+        text-align: center;
+        margin: 0px 50px;
+      }
+      .top>div>div>button{
+        height: 30px;
+        width: 80px;
+        border: 0px;
+        border-radius: 0px;
+        color: red;
+      }
+      .mid{
+        margin: 20px 30px;
+      }
+      .mid>h1{
+        margin-bottom: 10px;
+      }
+      .mid>div{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,200px);
+        gap: 10px;
+      }
+      .mid>div>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+      .mid>div>div>img{
+        width: 15%;
+      }
+      .mid>div>div>p{
+        text-align: center;
+        margin: 0px 30px;
+      }
+      .mid>div>div>div{
+        color: red;
+        border-top: 2px solid gray;
+      }
+      .bottom{
+        display: flex;
+        background-color: gainsboro;
+
+      }
+      .bottom>:nth-child(1)>img{
+        width:60%;
+        margin-left: 40px;
+      }
+      .bottom>:nth-child(2){
+        display: flex;
+        flex-direction: column;
+      }
+      .bottom>:nth-child(2)>div{
+        display: flex;
+        margin-top: 30px;
+      }
+      .bottom>:nth-child(2)>h1{
+        margin: 20px 0px;
+      }
+      .bottom>:nth-child(2)>p{
+        margin: 0px 120px 0px 0px;
+      }
+      .bottom>:nth-child(2)>div>img{
+        width: 45%;
+        margin-right: 10px;
+      }
+
+      /* Write all styles here  */
+      @media only screen and (max-width: 1000px) {
+        /* Medium Screen  */
+        .nav>div{
+          display: none;
+        }
+        .top>div{
+          grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,350px);
+        }
+        .mid>div{
+          grid-template-columns: repeat(2,1fr);
+          grid-template-rows: repeat(4,200px);
+        }
+        .bottom{
+          flex-direction: column;
+        }
+
+        }
+      
+
+      @media only screen and (max-width: 600px) {
+        /* Small Screen  */
+        .nav>div{
+          display: none;
+        }
+        .top>div{
+          grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6,350px);
+        }
+        .mid>div{
+          grid-template-columns: repeat(1,1fr);
+          grid-template-rows: repeat(8,200px);
+        }
+        .bottom{
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Domino's Pizza</h1>
+      <div>
+        <p>OUR MENU</p>
+        <p>DOMINO'S STORES</p>
+        <p>GIFT CARD</p>
+        <p>CORPORATE ENQUIRY</p>
+        <p>CONTACT</p>
+      </div>
+      <button>Download App</button>
+    </div>
+    <div class="top">
+      <h1>Order</h1>
+      <div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png" alt="error">
+        <h3>VEG PIZZA</h3>
+        <p>A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas, it's softer and tastier </p>
+        <button>View All</button>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png" alt="error">
+        <h3>VEG PIZZA</h3>
+        <p>A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas, it's softer and tastier </p>
+        <button>View All</button>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png" alt="error">
+        <h3>VEG PIZZA</h3>
+        <p>A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas, it's softer and tastier </p>
+        <button>View All</button>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png" alt="error">
+        <h3>VEG PIZZA</h3>
+        <p>A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas, it's softer and tastier </p>
+        <button>View All</button>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png" alt="error">
+        <h3>VEG PIZZA</h3>
+        <p>A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas, it's softer and tastier </p>
+        <button>View All</button>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-22/Screenshot%202022-12-22%20at%208.37.04%20AM_353938.png" alt="error">
+        <h3>VEG PIZZA</h3>
+        <p>A delight for veggie lovers! Choose from our wide range of delicious vegetarian pizzas, it's softer and tastier </p>
+        <button>View All</button>
+       </div>
+      </div>
+    </div>
+    <div class="mid">
+      <h1>Explore</h1>
+      <div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="error">
+        <h3>OUR MENU</h3>
+        <p>Explore our range of delicious pizzas,delivered in 30 minutes</p>
+        
+        <div><h2>DISCOVER PIZZA</h2></div>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="error">
+        <h3>OUR MENU</h3>
+        <p>Explore our range of delicious pizzas,delivered in 30 minutes</p>
+  
+        <div><h2>DISCOVER PIZZA</h2></div>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="error">
+        <h3>OUR MENU</h3>
+        <p>Explore our range of delicious pizzas,delivered in 30 minutes</p>
+        
+        <div><h2>DISCOVER PIZZA</h2></div>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="error">
+        <h3>OUR MENU</h3>
+        <p>Explore our range of delicious pizzas,delivered in 30 minutes</p>
+        
+        <div><h2>DISCOVER PIZZA</h2></div>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="error">
+        <h3>OUR MENU</h3>
+        <p>Explore our range of delicious pizzas,delivered in 30 minutes</p>
+        
+        <div><h2>DISCOVER PIZZA</h2></div>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="error">
+        <h3>OUR MENU</h3>
+        <p>Explore our range of delicious pizzas,delivered in 30 minutes</p>
+        
+        <div><h2>DISCOVER PIZZA</h2></div>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="error">
+        <h3>OUR MENU</h3>
+        <p>Explore our range of delicious pizzas,delivered in 30 minutes</p>
+        
+        <div><h2>DISCOVER PIZZA</h2></div>
+       </div>
+       <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%203.06.17%20PM_590391.png" alt="error">
+        <h3>OUR MENU</h3>
+        <p>Explore our range of delicious pizzas,delivered in 30 minutes</p>
+        
+        <div><h2>DISCOVER PIZZA</h2></div>
+       </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <!-- Use Flex to achieve the layout  -->
+      <div>
+       <img src="https://www.dominos.co.in/assets/new_app_img@2x.png" alt="error">
+      </div>
+
+      <div>
+        <h1>Unlock Exclusive Offers</h1>
+        <p>For lightning fast order experience Download the Dominos app</p>
+        <div>
+          <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.09%20PM_558991.png" alt="">
+          <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.43%20PM_652243.png" alt="">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
