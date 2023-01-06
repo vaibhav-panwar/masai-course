@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #cont{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(150px,5);
+            width: 40%;
+            gap: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <input type="text" id="a" placeholder="enter numbers">
+        <button class="no">1</button>
+        <button class="no">2</button>
+        <button class="no">3</button>
+        <button class="no">4</button>
+        <button class="no">5</button>
+        <button class="no">6</button>
+        <button class="no">7</button>
+        <button class="no">8</button>
+        <button class="no">9</button>
+        <button class="no">0</button>
+        <button class="op">+</button>
+        <button class="op">-</button>
+        <button class="op">*</button>
+        <button class="op">/</button>
+        <button id="equal">=</button>
+    </div>
+</body>
+<script>
+    let display = document.getElementById("a");
+    let numberpads = document.querySelectorAll(".no");
+    let operator = document.querySelectorAll(".op");
+    let equal = document.getElementById("equal");
+
+    let firstNumber = "";
+    let secondNumber = "";
+    let flag = true;
+    let operatorr = null;
+
+    for(let i=0;i<numberpads.length;i++){
+        numberpads[i].addEventListener("click",function(event){
+            if(flag == true){
+                firstNumber += event.target.innerText;
+            }
+            else{
+                secondNumber += event.target.innerText;
+            }
+            display.value = display.value + event.target.innerText;
+        })
+    }
+    for(let i=0; i<operator.length;i++){
+        operator[i].addEventListener("click",function(event){
+            flag = false;
+            operatorr= event.target.innerText;
+            display.value = display.value + event.target.innerText;
+        })
+    }
+    equal.addEventListener("click",function(){
+       display.value =  calculate(firstNumber,secondNumber,operatorr);
+    })
+    function calculate(firstNumber,secondNumber,operatorr){
+        if(operatorr == "+"){
+            return Number(firstNumber) + Number(secondNumber);
+        }
+        else if(operatorr == "-"){
+            return Number(firstNumber) - Number(secondNumber);
+        }
+        else if(operatorr == "*"){
+            return Number(firstNumber) * Number(secondNumber);
+        }
+        else if(operatorr == "/"){
+            return Number(firstNumber) / Number(secondNumber);
+        }
+    }
+
+</script>
+</html>
