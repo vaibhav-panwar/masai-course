@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Masai Doctor Records</title>
+  </head>
+  <body>
+    <!-- Use this form for data input  -->
+    <form>
+      <input placeholder="Name" type="text" id="name" />
+      <input placeholder="Doctor ID" type="text" id="doctor_id" />
+      <select id="specialization">
+        <option value="">Select Specialization</option>
+        <option value="Dermatologist">Dermatologist</option>
+        <option value="Dentist">Dentist</option>
+        <option value="Gynecologist">Gynecologist</option>
+      </select>
+      <input placeholder="Experience" type="number" id="experience" />
+      <input placeholder="Email" type="email" id="email" />
+      <input placeholder="Mobile No." type="number" id="mobile" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Use this Select tag for filter part  -->
+    <select id="filter">
+      <option value="">Select Specialization</option>
+      <option value="Dermatologist">Dermatologist</option>
+      <option value="Dentist">Dentist</option>
+      <option value="Gynecologist">Gynecologist</option>
+    </select>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Doctor ID</th>
+          <th>Specialization</th>
+          <th>Experience in Years</th>
+          <th>Email</th>
+          <th>Mobile No</th>
+          <th>Role</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Append Rows here using JS & DOM  -->
+      </tbody>
+    </table>
+  </body>
+  
+  <script>
+    let formel = document.querySelector("form");
+    let eltable = document.querySelector("tbody");
+    let tabledata = [];
+    let sName = document.getElementById("name");
+    let sID = document.getElementById("doctor_id");
+    let sSpecialization = document.getElementById("specialization")
+    let sExperience = document.getElementById("experience")
+    let sEmail = document.getElementById("email")
+    let sMobile = document.getElementById("mobile")
+    let srole=null;
+    if(Number(sExperience.value)<=1){
+      srole = "Trainee";
+    }
+    else if((Number(sExperience.value)>1) && (Number(sExperience.value)<5)){
+      srole = "Junior";
+    }
+    else if (Number(sExperience.value)>5){
+      srole = "Senior";
+    }
+
+    formel.addEventListener("submit",function(e){
+      e.preventDefault();
+      let docObject = {
+        Name : sName.value,
+        DoctorID : sID.value,
+        Specialization : sSpecialization.value,
+        Experience : sExperience.value,
+        Email : sEmail.value,
+        Mobile : sMobile.value,
+        Role : srole
+      }
+      tabledata.push(docObject);
+      eltable.innerHTML ="";
+      for(let i=0;i<tabledata.length;i++){
+        let tr = document.createElement("tr");
+        let eName = document.createElement("td");
+        eName.innerText = tabledata[i].Name;
+        let eID = document.createElement("td");
+        eID.innerText = tabledata[i].DoctorID;
+        let especialization = document.createElement("td");
+        especialization.innerText = tabledata[i].Specialization;
+        let eExperience = document.createElement("td");
+        eExperience.innerText = tabledata[i].Experience;
+        let eEmail = document.createElement("td");
+        eEmail.innerText = tabledata[i].Email;
+        let emobile = document.createElement("td");
+        emobile.innerText = tabledata[i].Mobile;
+        let erole = document.createElement("td");
+        erole.innerText = srole;
+        let eDelete = document.createElement("button");
+        eDelete.innerText = "Delete"
+        eDelete.style.backgroundColor = "red"
+        eDelete.addEventListener("click",function(){
+          document.getElementsByTagName("tr")[i+1].remove();
+          // delete tabledata[i];
+        });
+        tr.append(eName,eID,especialization,eExperience,eEmail,emobile,erole,eDelete);
+        eltable.append(tr);
+        
+
+      }
+    })
+    
+
+
+  </script>
+</html>
