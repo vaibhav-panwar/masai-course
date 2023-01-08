@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Form</title>
+    <style>
+      /* Write all necessery css here  */
+      .container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .container>div>h1{
+        text-align: center;
+      }
+      .container>div>form{
+        display: grid;
+        grid-template-columns: 200px;
+        grid-template-rows: repeat(7,30px);
+        gap: 10px;
+      }
+      .container>div{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 0px 30px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>Signup Form</h1>
+        <!-- Create the Signup form here  -->
+        <form>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email Address">
+        <input type="text" placeholder="country">
+        <input type="text" placeholder="Phone">
+        <input type="text" placeholder="Password">
+        <input type="submit" value="Create Account">
+        </form>
+    </div>
+    <div>
+      <h1>Signin Form</h1>
+      <!-- Create the Signin Form Here  -->
+      <form>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email Address">
+        <input type="text" placeholder="Password">
+        <input type="submit" value="Signin">
+      </form>
+    </div>
+    </div>
+  </body>
+</html>
