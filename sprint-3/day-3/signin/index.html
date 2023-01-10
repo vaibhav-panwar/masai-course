@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up Page</title>
+  <style>
+      /* Write all necessery css here  */
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <a href="./index.html">Signup</a>
+    <a href="./signin.html">Signin</a>
+  </div>
+  <div id="signup">
+    <h1>Please Enter Your Details</h1>
+    <form>
+      <input type="text" id="name">
+      <input type="email" id="email">
+      <input type="password"  id="password">
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+</body>
+<script>
+  let elform = document.querySelector("form");
+  let elname = document.getElementById("name");
+  let elemail = document.getElementById("email");
+  let elpass = document.getElementById("password");
+  let elarray = JSON.parse(localStorage.getItem("account-data"));
+  if(elarray ===null){
+    elarray = [];
+  }
+  elform.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    let elobj ={
+      name : elname.value,
+      email : elemail.value,
+      password : elpass.value
+    }
+    elarray.push(elobj);
+    localStorage.setItem("account-data",JSON.stringify(elarray));
+  })
+</script>
+
+</html>
