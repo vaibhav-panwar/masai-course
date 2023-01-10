@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://picsum.photos/id/237/200/300" alt="">
+    <h1>Number of likes: <span id="dis"></span></h1>
+    <button id = "inc"><</button>
+    <button id="dec">></button>
+</body>
+<script>
+    let display = document.getElementById("dis");
+    let incr = document.getElementById("inc");
+    let decr = document.getElementById("dec");
+
+    let count= +localStorage.getItem("pup");
+    if(count ===null){
+        count=0;
+    }
+    display.innerText = count;
+    decr.addEventListener("click",function(){
+        count++;
+        localStorage.setItem("pup",count);
+        display.innerText = count;
+    })
+    incr.addEventListener("click",function(){
+        count--;
+        localStorage.setItem("pup",count);
+        display.innerText = count;
+    })
+</script>
+
+
+</html>
