@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Masai Employee Records</title>
+  </head>
+  <body>
+    <!-- Use this form for taking the inputs  -->
+    <form>
+      <input placeholder="Name" type="text" id="name" />
+      <input placeholder="Employee ID" type="text" id="employee_id" />
+      <select id="department">
+        <option value="">Select Department</option>
+        <option value="HR">HR</option>
+        <option value="Finance">Finance</option>
+        <option value="Engineering">Engineering</option>
+      </select>
+      <input placeholder="Experience" type="number" id="experience" />
+      <input placeholder="Email" type="email" id="email" />
+      <input placeholder="Mobile No." type="number" id="mobile" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Use this select tag for filtering  -->
+    <select id="filter">
+      <option value="">Select Department</option>
+      <option value="HR">HR</option>
+      <option value="Finance">Finance</option>
+      <option value="Engineering">Engineering</option>
+    </select>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Employee ID</th>
+          <th>Department</th>
+          <th>Experience in Years</th>
+          <th>Email</th>
+          <th>Mobile No</th>
+          <th>Role</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Append Rows here using JS & DOM  -->
+      </tbody>
+    </table>
+  </body>
+  <script>
+    let formel = document.querySelector("form");
+    let ename = document.getElementById("name");
+    let eID = document.getElementById("employee_id");
+    let edept = document.getElementById("department");
+    let eexp = document.getElementById("experience");
+    let eemail = document.getElementById("email");
+    let emobile = document.getElementById("mobile");
+    let tbodyel = document.querySelector("tbody");
+    let filtersel = document.getElementById("filter");
+    let role = null;
+    if(+eexp.value<=1){
+      role = "Fresher";
+    }
+    else if(+eexp.value>1 && +eexp.value<5){
+      role = "Junior";
+    }
+    else{
+      role = "Senior";
+    }
+
+
+    let earr = JSON.parse(localStorage.getItem("edata"));
+    if(earr === null){
+      earr = [];
+    }
+    formel.addEventListener("submit",function(e){
+      e.preventDefault();
+      let eobj = {
+        name : ename.value,
+        employee_ID : eID.value,
+        department : edept.value,
+        experience : eexp.value,
+        email : eemail.value,
+        mobile : emobile.value
+      }
+      earr.push(eobj);
+      localStorage.setItem("edata",JSON.stringify(earr));
+      display(earr);
+    })
+    filtersel.addEventListener("change",()=>{
+      if(filtersel.value === ""){
+        display(earr);
+      }
+      else{
+        let filtered = earr.filter((el,index)=>{
+          if(el.department === filtersel.value){
+            return true;
+          }
+          else{
+            return false;
+          }
+        })
+        display(filtered);
+      }
+    })
+    function display(data){
+      tbodyel.innerHTML = "";
+      for(let i=0;i<earr.length;i++){
+        let tablerow = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.innerText = data[i].name;
+        let td2 = document.createElement("td");
+        td2.innerText = data[i].employee_ID;
+        let td3 = document.createElement("td");
+        td3.innerText = data[i].department;
+        let td4 = document.createElement("td");
+        td4.innerText = data[i].experience;
+        let td5 = document.createElement("td");
+        td5.innerText = data[i].email;
+        let td6 = document.createElement("td");
+        td6.innerText = data[i].mobile;
+        let td7 = document.createElement("td");
+        td7.innerText = role;
+        let td8 = document.createElement("td");
+        td8.innerText = "Delete";
+        td8.addEventListener("click",()=>{
+          earr = earr.filter((el,index)=>{
+            if(index === i){
+              return false;
+            }
+            else{
+              return true;
+            }
+          })
+          localStorage.setItem("edata",JSON.stringify(earr));
+          display(earr);
+        })
+        tablerow.append(td1,td2,td3,td4,td5,td6,td7,td8);
+        tbodyel.append(tablerow);
+      }  
+    }
+
+
+  </script>
+</html>
