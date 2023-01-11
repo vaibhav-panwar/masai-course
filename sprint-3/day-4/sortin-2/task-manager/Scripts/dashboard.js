@@ -54,6 +54,16 @@ function display(data){
      }
      progressarr.push(progressobj);
      localStorage.setItem("priority-list",JSON.stringify(progressarr));
+      data = data.filter((el,ind)=>{
+      if (ind === i){
+        return false
+      }
+      else {
+        return true
+      }
+     })
+     localStorage.setItem("task-list",JSON.stringify(data));
+     display(data);
     })
     tr.append(td1,td2,td3,td4,td5,td6);
     eltbody.append(tr);
