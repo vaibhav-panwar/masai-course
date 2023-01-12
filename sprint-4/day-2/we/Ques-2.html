@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise-2</title>
+  </head>
+  <body></body>
+  <script>
+    function waitPromise(ms) {
+      let promise = new Promise(function (resolve, reject) {
+        setTimeout(() => {
+          resolve("Resolved");
+        }, ms);
+      });
+      return promise;
+    }
+
+    let another = waitPromise(4000); // 4s
+    another.then((el) => {
+      console.log(el);
+    });
+  </script>
+</html>
