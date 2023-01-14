@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To - Do</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>User ID</td>
+                <td>Title</td>
+                <td>Completed</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+<script>
+    let api = "https://jsonplaceholder.typicode.com/todos";
+    let eltbody = document.querySelector("tbody");
+    let fetchedData = [];
+    fetchdata();
+    async function fetchdata() {
+        try {
+            let request = await fetch(api);
+            let data = await request.json();
+            fetchedData = data;
+            console.log(fetchedData);
+            display(fetchedData);
+
+        } catch (error) {
+            console.log(error);
+        }
+        
+    }
+    function display(data) {
+        eltbody.innerHTML = "";
+        for(let i=0;i<data.length;i++){
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            td1.textContent = data[i].userId;
+            let td2 = document.createElement("td");
+            td2.textContent = data[i].title;
+            let td3 = document.createElement("td");
+            td3.textContent = data[i].completed;
+            tr.append(td1, td2, td3);
+            eltbody.append(tr);
+        }
+    }
+</script>
+</html>
