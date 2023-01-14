@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country App</title>
+    <style>
+        body {
+            background-color: rgb(245, 244, 244);
+        }
+
+        #container {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        #container>div {
+            background-color: white;
+            text-align: center;
+        }
+
+        #container img {
+            width: 100%;
+        }
+
+        form {
+            margin: auto;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            width: 500px;
+        }
+
+        form input[type="text"] {
+            width: 70%;
+        }
+
+        form input {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input placeholder="Search" type="text" id="search" />
+        <input type="submit" value="Search" />
+    </form>
+    <div id="container"></div>
+</body>
+<script>
+    const API = "https://restcountries.com/v3.1/all";
+   
+    let container = document.getElementById("container");
+    let searchForm = document.querySelector("form");
+
+   
+    
+    let fetchedData = [];
+   
+    asyncFetch();
+
+    searchForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let searchParams = searchForm.search.value;
+
+      let filtered = fetchedData.filter((element) => {
+        if (
+          element.name.toUpperCase().includes(searchParams.toUpperCase()) ===
+          true
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      Display(filtered);
+    });
+
+   
+
+    async function asyncFetch() {
+      try {
+        let request = await fetch(API);
+        let data = await request.json();
+        fetchedData = data.map(function (element) {
+          return {
+            name: element.name.official,
+            population: element.population,
+            continent: element.continents[0],
+            flag: element.flags.png,
+          };
+        });
+        console.log(fetchedData);
+        Display(fetchedData);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    function Display(data) {
+      container.innerHTML = "";
+      data.forEach((element) => {
+        let card = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.setAttribute("src", element.flag);
+
+        let name = document.createElement("h2");
+        name.innerText = element.name;
+
+        let population = document.createElement("p");
+        population.textContent = element.population;
+
+        let continent = document.createElement("p");
+        continent.innerText = element.continent;
+
+        card.append(img, name, population, continent);
+        container.append(card);
+      });
+    }
+</script>
+
+</html>
