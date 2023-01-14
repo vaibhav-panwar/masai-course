@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+    }
+    #container img{
+        width: 100%;
+    }
+    #container>div{
+        border: 2px solid black;
+    }
+    #nav{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a href="./index.html"><h1>Home</h1></a>
+        <a href="./cart.html"><h1>Cart</h1></a>
+    </div>
+    <form>
+        <input placeholder="From" type="number" id="from" />
+        <input placeholder="To" type="number" id="to" />
+        <input type="submit" value="Search" />
+    </form>
+    <div id="container">
+
+    </div>
+</body>
+<script>
+     let API = "https://fakestoreapi.com/products";
+     container = document.getElementById("container");
+     let searchForm = document.querySelector("form");
+     let fetchdata = [];
+     let rdata =JSON.parse(localStorage.getItem("cart"));
+     if(rdata === null){
+        rdata = [];
+     }
+     awaitfetch();
+     
+    
+    async function awaitfetch(){
+        try {
+            let request = await fetch(API);
+            let data = await request.json();
+            fetchdata = data;
+            display(fetchdata);
+            searchForm.addEventListener("submit",(e)=>{
+                e.preventDefault();
+                let from = searchForm.from.value;
+                let to = searchForm.to.value;
+                let filtered = fetchdata.filter((el)=>{
+                    if(el.price>=from && el.price<=to){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+
+                })
+                display(filtered);
+            })
+
+            
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
+    function display(data) {
+      container.innerHTML = "";
+      for(let i=0;i<data.length;i++){
+        let card = document.createElement("div");
+        let img = document.createElement("img");
+        img.setAttribute("src",data[i].image);
+        let brand = document.createElement("h2");
+        brand.textContent = data[i].title;
+        let price = document.createElement("h3");
+        price.textContent = data[i].price;
+        let desc = document.createElement("p");
+        desc.textContent = data[i].description;
+        let cat = document.createElement("p");
+        cat.textContent = data[i].category;
+        let button = document.createElement("button");
+        button.innerText = "Add to Cart";
+        button.addEventListener("click",()=>{
+            let robj = {
+                image : data[i].image,
+                brand:data[i].title,
+                price : data[i].price,
+                description : data[i].description,
+                category : data[i].category
+            }
+            rdata.push(robj);
+            localStorage.setItem("cart",JSON.stringify(rdata));
+
+
+        })
+        card.append(img,brand,price,desc,cat,button);
+        container.append(card);
+     }
+      
+    }
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #contain{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+    }
+    #contain img{
+        width: 100%;
+    }
+    #contain>div{
+        border: 2px solid black;
+    }
+     #nav{
+        display: flex;
+        justify-content: space-evenly;
+    }
+   
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a href="./index.html">
+            <h1>Home</h1>
+        </a>
+        <a href="./cart.html">
+            <h1>Cart</h1>
+        </a>
+    </div>
+    <div id="contain">
+
+    </div>
+</body>
+<script>
+    let cartarr = JSON.parse(localStorage.getItem("cart"));
+    let contain = document.getElementById("contain");
+    if(cartarr === null){
+        cartarr = [];
+    }
+    display(cartarr);
+    function display(data) {
+            contain.innerHTML = "";
+            for (let i = 0; i < data.length; i++) {
+                let card = document.createElement("div");
+                let img = document.createElement("img");
+                img.setAttribute("src", data[i].image);
+                let brand = document.createElement("h2");
+                brand.textContent = data[i].title;
+                let price = document.createElement("h3");
+                price.textContent = data[i].price;
+                let desc = document.createElement("p");
+                desc.textContent = data[i].description;
+                let cat = document.createElement("p");
+                cat.textContent = data[i].category;
+               
+                card.append(img, brand, price, desc, cat);
+                contain.append(card);
+            }
+
+        }
+</script>
+</html>
