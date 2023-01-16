@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* All Your css here  */
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <h1>Masai Country Records</h1>
+      <a href="./index.html">Home</a>
+      <a href="./visited.html">Visited</a>
+    </div>
+    <select id="sort">
+      <option value="">Sort By Population</option>
+      <option value="asc">Ascending</option>
+      <option value="desc">Descending</option>
+    </select>
+    <form>
+      <input type="text" placeholder="Search" id="search" />
+      <input type="submit" value="Search" />
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Country</th>
+          <th>Rank</th>
+          <th>Population</th>
+          <th>Visited</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Here all rows will be appended  -->
+      </tbody>
+    </table>
+  </body>
+  <script>
+    // Write all JS here
+    const url = `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-countries`;
+    const aurl = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-countries?sort=population&&order=asc";
+    let durl = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-countries?sort=population&&order=desc";
+    let eltbody = document.querySelector("tbody");
+    let elsort = document.getElementById("sort");
+    let f = document.querySelector("form");
+    let fil= document.getElementById("search");
+    awaitFetch(url);
+    elsort.addEventListener("change",()=>{
+      if(elsort.value == ""){
+        awaitFetch(url);
+      }
+      else if(elsort.value == "asc"){
+        awaitFetch(aurl);
+      }
+      else{
+        awaitFetch(durl);
+      }
+    })
+
+    async function awaitFetch(x){
+      try {
+        let req = await fetch(x);
+        let data = await req.json();
+        let fdata = data.data;
+        display(fdata);
+        f.addEventListener("submit",(e)=>{
+          e.preventDefault();
+          let filtered = fdata.filter((el)=>{
+            if(el.country.toUpperCase().includes(fil.value.toUpperCase())){
+              return true;
+            }
+            else{
+              return false;
+            }
+          })
+          display(filtered);
+        })
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    let visitarr = JSON.parse(localStorage.getItem("visited"));
+    if(visitarr ===null){
+      visitarr = [];
+    }
+    function display(data) {
+      eltbody.innerHTML = "";
+      for(let i=0;i<data.length;i++){
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        td1.innerText = data[i].id;
+        let td2 = document.createElement("td");
+        td2.innerText = data[i].country;
+        let td3 = document.createElement("td");
+        td3.innerText = data[i].Rank;
+        let td4  = document.createElement("td");
+        td4.innerText = data[i].population;
+        let td5 = document.createElement("td");
+        td5.innerText = "Visit";
+        td5.addEventListener("click",()=>{
+          let visitobj = {
+            id : data[i].id,
+            country : data[i].country,
+            rank : data[i].Rank,
+            population : data[i].population
+          }
+          visitarr.push(visitobj);
+          localStorage.setItem("visited",JSON.stringify(visitarr));
+        })
+        tr.append(td1,td2,td3,td4,td5);
+        eltbody.append(tr);
+      }
+    }
+    
+   
+  </script>
+</html>

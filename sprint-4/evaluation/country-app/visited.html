@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visited Page</title>
+    <style>
+      /* All Your css here  */
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Masai Country Records</h1>
+      <a href="./index.html">Home</a>
+      <a href="./visited.html">Visited</a>
+    </div>
+    <h1 id="total">
+      You have visited total <span id="visited-total">0</span> countries.
+    </h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Country</th>
+          <th>Rank</th>
+          <th>Population</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Here all rows will be appended  -->
+      </tbody>
+    </table>
+  </body>
+  <script>
+    let vdata = JSON.parse(localStorage.getItem("visited"));
+    if(vdata ===null){
+      vdata = [];
+    }
+    let eltbody = document.querySelector("tbody");
+    let total = document.getElementById("visited-total");
+    total.innerText = vdata.length;
+    display(vdata);
+    function display(data) {
+        eltbody.innerHTML = "";
+        for (let i = 0; i < data.length; i++) {
+          let tr = document.createElement("tr");
+          let td1 = document.createElement("td");
+          td1.innerText = data[i].id;
+          let td2 = document.createElement("td");
+          td2.innerText = data[i].country;
+          let td3 = document.createElement("td");
+          td3.innerText = data[i].Rank;
+          let td4 = document.createElement("td");
+          td4.innerText = data[i].population;
+          let td5 = document.createElement("td");
+          td5.innerText = "Remove";
+          td5.addEventListener("click", () => {
+            vdata = vdata.filter((el,ind)=>{
+              if(ind === i){
+                return false
+              }
+              else{
+                return true
+              }
+            })
+            localStorage.setItem("visited",JSON.stringify(vdata));
+            display(vdata);
+            total.innerText = vdata.length;
+          })
+          tr.append(td1, td2, td3, td4, td5);
+          eltbody.append(tr);
+        }
+      }
+  </script>
+</html>
