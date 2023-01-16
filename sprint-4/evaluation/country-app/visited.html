@@ -25,6 +25,7 @@
           <th>Country</th>
           <th>Rank</th>
           <th>Population</th>
+          <th>Visited</th>
           <th>Remove</th>
         </tr>
       </thead>
@@ -55,8 +56,10 @@
           let td4 = document.createElement("td");
           td4.innerText = data[i].population;
           let td5 = document.createElement("td");
-          td5.innerText = "Remove";
-          td5.addEventListener("click", () => {
+          td5.innerText = "Visit";
+          let td6 = document.createElement("td");
+          td6.innerText = "Remove";
+          td6.addEventListener("click", () => {
             vdata = vdata.filter((el,ind)=>{
               if(ind === i){
                 return false
@@ -69,7 +72,7 @@
             display(vdata);
             total.innerText = vdata.length;
           })
-          tr.append(td1, td2, td3, td4, td5);
+          tr.append(td1, td2, td3, td4, td5,td6);
           eltbody.append(tr);
         }
       }
