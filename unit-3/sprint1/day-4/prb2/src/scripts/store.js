@@ -14,7 +14,7 @@ let btn2 = document.getElementById("btn2");
 append(arr);
 function append(data) {
   let eldiv = document.getElementById("mobile_list");
-  eldiv.innerHTML = "";
+  // eldiv.innerHTML = "";
   data.forEach((el,i)=>{
     let div = document.createElement("div");
     let img = document.createElement("img");
