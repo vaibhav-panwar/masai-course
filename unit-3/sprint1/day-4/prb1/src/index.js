@@ -1,6 +1,5 @@
 function totalPromotedStudents(data) {
-  data = data.sort(
-    (p1, p2) => (p1.age < p2.age) ? -1 : (p1.age > p2.age) ? 1 : 0);
+  data.sort(function(a,b){return a.age - b.age});
   let sum = 0;
   let count = 0;
 
