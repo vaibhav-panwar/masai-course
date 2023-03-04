@@ -3,8 +3,8 @@ if(arr == null){
   arr =[];
 }
 
-let btn1 = document.getElementById("btn1");
-let btn2 = document.getElementById("btn2");
+// let btn1 = document.getElementById("btn1");
+// let btn2 = document.getElementById("btn2");
 // btn1.addEventListener("click",()=>{
 //   sortLowToHigh();
 // })
@@ -13,6 +13,14 @@ let btn2 = document.getElementById("btn2");
 // })
 append(arr);
 function append(data) {
+  let btn1 = document.getElementById("btn1");
+  let btn2 = document.getElementById("btn2");
+btn1.addEventListener("click",()=>{
+  sortLowToHigh();
+})
+btn2.addEventListener("click",()=>{
+  sortHighToLow();
+})
   let eldiv = document.getElementById("mobile_list");
   // eldiv.innerHTML = "";
   data.forEach((el,i)=>{
