@@ -15,12 +15,8 @@ append(arr);
 function append(data) {
   let btn1 = document.getElementById("btn1");
   let btn2 = document.getElementById("btn2");
-btn1.addEventListener("click",()=>{
-  sortLowToHigh();
-})
-btn2.addEventListener("click",()=>{
-  sortHighToLow();
-})
+btn1.addEventListener("click",sortLowToHigh());
+btn2.addEventListener("click",sortHighToLow())
   let eldiv = document.getElementById("mobile_list");
   // eldiv.innerHTML = "";
   data.forEach((el,i)=>{
