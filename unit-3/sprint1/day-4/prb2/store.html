@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/store.css" />
+    <title>Store</title>
+    <style>
+      #navbar{
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+      }
+      #navbar div{
+        display: flex;
+        justify-content: space-around;
+        width: 150px;
+      }
+      a{
+        text-decoration: none;
+      }
+      #navbar a h3{
+        text-decoration: none;
+         color: wheat;
+      }
+      #mobile_list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h2>Mobile Store</h2>
+      <div>
+        <a href="./index.html">
+          <h3>Home</h3>
+        </a>
+        <a href="./store.html">
+          <h3>Store</h3>
+        </a>
+      </div>
+      
+    </div>
+    <div id="block-2">
+      <div id="sort_filter">
+        <button id="btn1">
+          Sort Price Low to High
+        </button>
+        <button id="btn2">
+          Sort Price High to Low
+        </button>
+      </div>
+
+      <div id="mobile_list"></div>
+    </div>
+    <script src="./src/scripts/store.js"></script>
+  </body>
+</html>

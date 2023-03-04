@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Home</title>
+    <style>
+      #navbar{
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+      }
+      #navbar div{
+        display: flex;
+        justify-content: space-around;
+        width: 150px;
+      }
+      a{
+        text-decoration: none;
+      }
+      #navbar a h3{
+        text-decoration: none;
+         color: wheat;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+      }
+      #input_data{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #input_data input{
+        margin: 10px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h2>Mobile Store</h2>
+      <div>
+        <a href="./index.html"><h3>Home</h3></a>
+        <a href="./store.html"><h3>Store</h3></a>
+      </div>
+    </div>
+
+    <div id="input_data">
+      <h1>Add Mobiles</h1>
+      <form id="mobile_form">
+        <input type="text" id="mobile_name" placeholder="Product name">
+        <input type="text" id="mobile_brand" placeholder="Product brand">
+        <input type="text" id="mobile_price" placeholder="Product price">
+        <input type="text" id="mobile_image" placeholder="Product image">
+        <input type="submit">
+      </form>
+      
+      
+    </div>
+    <script src="./src/scripts/index.js"></script>
+  </body>
+</html>
