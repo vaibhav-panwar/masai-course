@@ -19,14 +19,14 @@ function getInputData(){
   let elprice = document.getElementById("mobile_price");
   let elimage = document.getElementById("mobile_image");
   
-  elform.addEventListener("submit", (e) => {
-    e.preventDefault();
-    getInputData();
-    elname.value = ""
-    elbrand.value = ""
-    elprice.value = ""
-    elimage.value = ""
-  });
+  // elform.addEventListener("submit", (e) => {
+  //   e.preventDefault();
+  //   getInputData();
+  //   elname.value = ""
+  //   elbrand.value = ""
+  //   elprice.value = ""
+  //   elimage.value = ""
+  // });
   let name = elname.value;
   let brand = elbrand.value;
   let price = elprice.value;
