@@ -29,6 +29,9 @@
         display: grid;
         grid-template-columns: repeat(2,1fr);
       }
+      #sort_filter>:nth-child(1){
+          background-color: red;
+      }
     </style>
   </head>
   <body>
@@ -46,10 +49,10 @@
     </div>
     <div id="block-2">
       <div id="sort_filter">
-        <button id="btn1">
+        <button>
           Sort Price Low to High
         </button>
-        <button id="btn2">
+        <button>
           Sort Price High to Low
         </button>
       </div>

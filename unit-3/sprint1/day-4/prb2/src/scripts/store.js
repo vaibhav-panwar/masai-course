@@ -1,26 +1,31 @@
-let arr = JSON.parse(localStorage.getItem("mobile_data"));
-if(arr == null){
-  arr =[];
-}
+// let arr = JSON.parse(localStorage.getItem("mobile_data"));
+// if(arr == null){
+//   arr =[];
+// }
+// let eldiv = document.getElementById("mobile_list");
 
-// let btn1 = document.getElementById("btn1");
-// let btn2 = document.getElementById("btn2");
-// btn1.addEventListener("click",()=>{
-//   sortLowToHigh();
-// })
-// btn2.addEventListener("click",()=>{
-//   sortHighToLow();
-// })
-append(arr);
+
+
 function append(data) {
-  let btn1 = document.getElementById("btn1");
-  let btn2 = document.getElementById("btn2");
-btn1.addEventListener("click",sortLowToHigh());
-btn2.addEventListener("click",sortHighToLow())
+  let arr = JSON.parse(localStorage.getItem("mobile_data"));
+  if (arr == null) {
+    arr = [];
+  }
   let eldiv = document.getElementById("mobile_list");
-  // eldiv.innerHTML = "";
+  let btn1 = document.querySelector("#sort_filter>:nth-child(1)")
+  let btn2 = document.querySelector("#sort_filter>:nth-child(2)")
+  btn1.addEventListener("click", () => {
+    sortLowToHigh()
+  })
+
+
+  btn2.addEventListener("click", () => {
+    sortHighToLow()
+  })
+  eldiv.innerHTML = "";
   data.forEach((el,i)=>{
     let div = document.createElement("div");
+    div.setAttribute("class","mobile");
     let img = document.createElement("img");
     img.setAttribute("src",el.image);
     img.setAttribute("alt","error");
@@ -41,6 +46,10 @@ btn2.addEventListener("click",sortHighToLow())
 }
 
 function remove(index) {
+  let arr = JSON.parse(localStorage.getItem("mobile_data"));
+  if (arr == null) {
+    arr = [];
+  }
   arr = arr.filter((el,ind)=>{
     if(ind==index){
       return false;
@@ -54,14 +63,22 @@ function remove(index) {
 }
 
 function sortLowToHigh() {
+  let arr = JSON.parse(localStorage.getItem("mobile_data"));
+  if (arr == null) {
+    arr = [];
+  }
   // sort the list of mobiles in ascendning order of price
-  arr = arr.sort(function(a,b){return a.price - b.price})
+  arr =arr.sort((a,b)=> a.price - b.price)
   append(arr)
 }
 
 function sortHighToLow() {
+  let arr = JSON.parse(localStorage.getItem("mobile_data"));
+  if (arr == null) {
+    arr = [];
+  }
   // sort the list of mobiles in descending order of the price
-  arr = arr.sort(function (a, b) { return b.price - a.price })
+  arr =arr.sort( (a, b)=>  b.price - a.price )
   append(arr)
 }
 
