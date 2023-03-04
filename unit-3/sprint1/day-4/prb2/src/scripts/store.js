@@ -2,7 +2,7 @@ let arr = JSON.parse(localStorage.getItem("mobile_data"));
 if(arr == null){
   arr =[];
 }
-let eldiv = document.getElementById("mobile_list");
+
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
 // btn1.addEventListener("click",()=>{
@@ -13,6 +13,7 @@ let btn2 = document.getElementById("btn2");
 // })
 append(arr);
 function append(data) {
+  let eldiv = document.getElementById("mobile_list");
   eldiv.innerHTML = "";
   data.forEach((el,i)=>{
     let div = document.createElement("div");
