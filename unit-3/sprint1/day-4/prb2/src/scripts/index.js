@@ -13,6 +13,20 @@ elform.addEventListener("submit",(e)=>{
   elimage.value = ""
 });
 function getInputData(){
+  let elform = document.getElementById("mobile_form");
+  let elname = document.getElementById("mobile_name");
+  let elbrand = document.getElementById("mobile_brand");
+  let elprice = document.getElementById("mobile_price");
+  let elimage = document.getElementById("mobile_image");
+  
+  elform.addEventListener("submit", (e) => {
+    e.preventDefault();
+    getInputData();
+    elname.value = ""
+    elbrand.value = ""
+    elprice.value = ""
+    elimage.value = ""
+  });
   let name = elname.value;
   let brand = elbrand.value;
   let price = elprice.value;
