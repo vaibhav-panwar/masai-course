@@ -5,12 +5,12 @@ if(arr == null){
 let eldiv = document.getElementById("mobile_list");
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
-btn1.addEventListener("click",()=>{
-  sortLowToHigh();
-})
-btn2.addEventListener("click",()=>{
-  sortHighToLow();
-})
+// btn1.addEventListener("click",()=>{
+//   sortLowToHigh();
+// })
+// btn2.addEventListener("click",()=>{
+//   sortHighToLow();
+// })
 append(arr);
 function append(data) {
   eldiv.innerHTML = "";
