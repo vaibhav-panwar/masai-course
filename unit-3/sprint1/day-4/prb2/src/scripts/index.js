@@ -1,17 +1,17 @@
-let elform = document.getElementById("mobile_form");
-let elname = document.getElementById("mobile_name");
-let elbrand = document.getElementById("mobile_brand");
-let elprice = document.getElementById("mobile_price");
-let elimage = document.getElementById("mobile_image");
-console.log(elform);
-elform.addEventListener("submit",(e)=>{
-  e.preventDefault();
-  getInputData();
-  elname.value = ""
-  elbrand.value = ""
-  elprice.value = ""
-  elimage.value = ""
-});
+// let elform = document.getElementById("mobile_form");
+// let elname = document.getElementById("mobile_name");
+// let elbrand = document.getElementById("mobile_brand");
+// let elprice = document.getElementById("mobile_price");
+// let elimage = document.getElementById("mobile_image");
+// console.log(elform);
+// elform.addEventListener("submit",(e)=>{
+//   e.preventDefault();
+//   getInputData();
+//   elname.value = ""
+//   elbrand.value = ""
+//   elprice.value = ""
+//   elimage.value = ""
+// });
 function getInputData(){
   let elform = document.getElementById("mobile_form");
   let elname = document.getElementById("mobile_name");
