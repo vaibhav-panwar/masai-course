@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Dalenna",
+    "age": 10,
+    "promoted": true,
+    "gender": "Female"
+  },
+  {
+    "name": "Hewie",
+    "age": 9,
+    "promoted": true,
+    "gender": "Male"
+  },
+  {
+    "name": "Brantley",
+    "age": 14,
+    "promoted": false,
+    "gender": "Male"
+  },
+  {
+    "name": "Bowie",
+    "age": 14,
+    "promoted": true,
+    "gender": "Male"
+  },
+  {
+    "name": "Augustine",
+    "age": 7,
+    "promoted": false,
+    "gender": "Female"
+  },
+  {
+    "name": "Smitty",
+    "age": 15,
+    "promoted": true,
+    "gender": "Male"
+  },
+  {
+    "name": "Reggis",
+    "age": 12,
+    "promoted": true,
+    "gender": "Female"
+  },
+  {
+    "name": "Jacobo",
+    "age": 13,
+    "promoted": true,
+    "gender": "Female"
+  },
+  {
+    "name": "Taite",
+    "age": 5,
+    "promoted": false,
+    "gender": "Male"
+  },
+  {
+    "name": "Stanleigh",
+    "age": 14,
+    "promoted": true,
+    "gender": "Male"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "class": 2,
+    "age": 10,
+    "gender": "Female",
+    "promoted": true
+  },
+  {
+    "class": 3,
+    "age": 11,
+    "gender": "Male",
+    "promoted": false
+  },
+  {
+    "class": 1,
+    "age": 8,
+    "gender": "Female",
+    "promoted": true
+  },
+  {
+    "class": 2,
+    "age": 10,
+    "gender": "Female",
+    "promoted": true
+  },
+  {
+    "class": 3,
+    "age": 11,
+    "gender": "Female",
+    "promoted": false
+  },
+  {
+    "class": 1,
+    "age": 8,
+    "gender": "Male",
+    "promoted": true
+  },
+  {
+    "class": 2,
+    "age": 10,
+    "gender": "Female",
+    "promoted": false
+  },
+  {
+    "class": 5,
+    "age": 15,
+    "gender": "Female",
+    "promoted": false
+  },
+  {
+    "class": 5,
+    "age": 15,
+    "gender": "Male",
+    "promoted": true
+  }
+]
