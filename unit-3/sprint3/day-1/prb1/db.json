@@ -1,0 +1,134 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Abram Langtry",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": 1,
+      "salary": 95000
+    },
+    {
+      "id": 2,
+      "name": "Flossy Arrell",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": 2,
+      "salary": 20000
+    },
+    {
+      "id": 3,
+      "name": "Giorgio Antonioni",
+      "image": "/images/avatar/avatar3.jpeg",
+      "department": "3",
+      "salary": "9500"
+    },
+    {
+      "id": "tEYFrHNsdO",
+      "name": "Himanshu",
+      "image": "/images/avatar/avatar3.jpeg",
+      "department": "4",
+      "salary": "100000"
+    },
+    {
+      "name": "John Doe",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": 1,
+      "salary": 80000,
+      "id": "R4dvtugCT2"
+    },
+    {
+      "name": "Vaibhav",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": "1",
+      "salary": "932",
+      "createdAt": 1679075871867,
+      "id": "TFo6Dd7mmO"
+    },
+    {
+      "name": "Varshant",
+      "image": "/images/avatar/avatar2.jpeg",
+      "department": "1",
+      "salary": "23",
+      "createdAt": 1679076461775,
+      "id": "WWPB835Qaf"
+    },
+    {
+      "name": "Bandar",
+      "image": "/images/avatar/avatar3.jpeg",
+      "department": "2",
+      "salary": "123304",
+      "createdAt": 1679076526227,
+      "id": "HoElmpVLyr"
+    },
+    {
+      "id": "Az7pjbuw3F",
+      "name": "Jatin",
+      "image": "/images/avatar/avatar2.jpeg",
+      "department": "1",
+      "salary": "10203"
+    },
+    {
+      "name": "Akshay",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": "1",
+      "salary": "10203",
+      "createdAt": 1679105973162,
+      "id": "WWPT0Hauio"
+    },
+    {
+      "name": "Sam",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": "2",
+      "salary": "102340",
+      "createdAt": 1679106089956,
+      "id": "03La9jn3XT"
+    },
+    {
+      "name": "Rohan",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": "1",
+      "salary": "100002",
+      "createdAt": 1679106739043,
+      "id": "rEEABnshyh"
+    },
+    {
+      "name": "Rohan",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": "1",
+      "salary": "100002",
+      "createdAt": 1679106751460,
+      "id": "yrJg6GfZ8v"
+    },
+    {
+      "name": "Rohan",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": "1",
+      "salary": "100002",
+      "createdAt": 1679106752216,
+      "id": "yPYUq4MnbY"
+    },
+    {
+      "name": "Rohan",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": "1",
+      "salary": "100002",
+      "createdAt": 1679106752408,
+      "id": "I0gz6ePtQe"
+    },
+    {
+      "name": "vaibhav",
+      "image": "/images/avatar/avatar1.jpeg",
+      "department": "1",
+      "salary": "27",
+      "createdAt": 1679112750417,
+      "id": "xXB4c1G0Gk"
+    },
+    {
+      "name": "Sonam",
+      "image": "/images/avatar/avatar3.jpeg",
+      "department": "2",
+      "salary": "5",
+      "createdAt": 1679112861220,
+      "id": "7NV5N0f8qt"
+    }
+  ]
+}
