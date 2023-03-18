@@ -25,12 +25,16 @@ function fetchData(api) {
       console.error(err);
     })
 }
-function createList(deta, wheretoappend) {
+function createList(deta,wheretoappend) {
+  let cardList = document.createElement("div");
+  cardList.setAttribute("class","card-list");
+  cardList.innerHTML = "";
   wheretoappend.innerHTML = "";
   deta.forEach((el) => {
     let a = createCard(el.id, el.name, el.salary, el.image, el.department);
-    wheretoappend.append(a);
+    cardList.append(a);
   })
+  wheretoappend.append(cardList);
 }
 function createCard(id, name, salary, imgUrl, dept) {
   let card = document.createElement("div");
