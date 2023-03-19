@@ -46,9 +46,9 @@ function card(id, name, email, imgUrl) {
   <div class="card__img">
               <img src="${imgUrl}" alt="Ad Minister image">
             </div>
-            <div class="card_body">
-              <h3 class="card_item card_title">${name}</h3>
-              <div class="card-item card_description">${email}</div>
+            <div class="card__body">
+              <h3 class="card__item card__title">${name}</h3>
+              <div class="card__item card__description">${email}</div>
             </div>
           </div>
   `
