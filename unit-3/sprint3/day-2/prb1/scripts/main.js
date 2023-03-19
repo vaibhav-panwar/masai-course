@@ -43,7 +43,7 @@ function card(id, name, email, imgUrl) {
   let card = document.createElement("div");
   card.classList.add("card")
   let a = `
-  <div class="card_img">
+  <div class="card__img">
               <img src="${imgUrl}" alt="Ad Minister image">
             </div>
             <div class="card_body">
