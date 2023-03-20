@@ -86,10 +86,14 @@ function createEl (id,name,done){
 }
 function makelist(deta,whereto){
   whereto.innerHTML = "";
+  let todolist = document.createElement("div");
+  todolist.classList.add("todo-list-wrapper");
+  todolist.innerHTML = "";
   deta.forEach((el)=>{
   let a = createEl(el.id,el.title,el.completed);
-  whereto.append(a); 
+  todolist.append(a); 
   })
+  whereto.append(todolist);
 }
 
 let mainSection = document.getElementById("data-list-wrapper");
