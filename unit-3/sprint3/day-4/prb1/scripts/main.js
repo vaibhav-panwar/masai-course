@@ -30,9 +30,7 @@ loginUserButton.addEventListener("click", (e) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      notificationWrapper.innerHTML = `<h5 class="notification info">
-    hey ${data.user.username}, welcome back!
-</h5>`
+      notificationWrapper.innerHTML = `<h5 class="notification info">hey ${data.user.username}, welcome back! </h5>`
       userAuthToken = data.accessToken;
       userId = data.user.id;
       localStorage.setItem("localAccessToken", userAuthToken);
@@ -51,47 +49,48 @@ getTodoButton.addEventListener("click", (e) => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      makelist(data,mainSection);
+      makelist(data, mainSection);
     })
     .catch((err) => console.error(err))
 })
-function createEl (id,name,done){
+function createEl(id, name, done) {
   let cover = document.createElement("label");
   let inp = document.createElement("input");
-  inp.setAttribute("data-id",id);
-  inp.setAttribute("type","checkbox");
+  inp.setAttribute("data-id", id);
+  inp.setAttribute("type", "checkbox");
   inp.classList.add("todo-item-checkbox");
-  if(done){
-    inp.setAttribute("checked","");
+  if (done) {
+    inp.setAttribute("checked", "");
   }
-  inp.addEventListener('change',()=>{
-    fetch(`${urlTodosBase}${userId}`,{
-      method:'PATCH',
-      headers:{
+  inp.addEventListener('change', () => {
+    fetch(`${urlTodosBase}${userId}`, {
+      method: 'PATCH',
+      headers: {
         'Authorization': `Bearer ${userAuthToken}`,
-        'Content-type' : 'application/json'
+        'Content-type': 'application/json'
       },
-      body :JSON.stringify({
-        completed : !done
+      body: JSON.stringify({
+        completed: !done
       })
     })
-    .then((res)=>res.json())
-    .then((data)=>console.log(data))
-    .catch((err)=>console.error(err))
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.error(err))
   })
   cover.append(inp);
   cover.appendChild(document.createTextNode(name));
-  
+
   return cover
 }
-function makelist(deta,whereto){
+function makelist(deta, whereto) {
   whereto.innerHTML = "";
   let todolist = document.createElement("div");
   todolist.classList.add("todo-list-wrapper");
+  todolist.setAttribute("id","todo-list-wrapper");
   todolist.innerHTML = "";
-  deta.forEach((el)=>{
-  let a = createEl(el.id,el.title,el.completed);
-  todolist.append(a); 
+  deta.forEach((el) => {
+    let a = createEl(el.id, el.title, el.completed);
+    todolist.append(a);
   })
   whereto.append(todolist);
 }
