@@ -27,6 +27,7 @@ getTodoButton.addEventListener("click",(e)=>{
     e.preventDefault();
     fetchRender(urlTodosBase);
   })
+  filterByCategoryWrapper.innerHTML = "";
   filterByCategoryWrapper.append(work,chores,family,learning,reset);
   
 })
