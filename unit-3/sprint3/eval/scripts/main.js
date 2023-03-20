@@ -23,6 +23,7 @@ getTodoButton.addEventListener("click",(e)=>{
   let reset = document.createElement("button");
   reset.textContent = "reset";
   reset.classList.add("filter-by-category-reset");
+  reset.setAttribute("data-id","Reset");
   reset.addEventListener("click",(e)=>{
     e.preventDefault();
     fetchRender(urlTodosBase);
