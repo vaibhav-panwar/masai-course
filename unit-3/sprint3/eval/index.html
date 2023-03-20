@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/skeleton.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <h1>Masai Todo App</h1>
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="columns four sidebar-one" id="sidebar-one">
+          <button id="fetch-todos" class="u-full-width button button-primary">fetch todos</button>
+          <hr>
+
+          <h4>Sort Todos alphabetically by their title</h4>
+          <button
+            id="sort-low-to-high"
+            class="u-full-width button button-primary"
+          >
+            Sort (A to Z)
+          </button>
+          <button
+            id="sort-high-to-low"
+            class="u-full-width button button-primary"
+          >
+          Sort (Z to A)
+          </button>
+          <hr />
+
+          <h4>Filter Todos Based Status</h4>
+          <button
+            id="filter-completed"
+            class="u-full-width button button-primary"
+          >
+            Completed
+          </button>
+          <button
+            id="filter-pending"
+            class="u-full-width button button-primary"
+          >
+            Pending
+          </button>
+          <hr />
+
+          <h4>Filter Todos by Category</h4>
+            <div class="filter-by-categories-wrapper" id="filter-by-categories-wrapper">
+               category button comes here dynamically
+            </div>
+          <hr />
+
+
+        </div>
+
+        <div class="columns eight main">
+          <div class="notifications-wrapper" id="notifications-wrapper"></div>
+          <div class="data-list-wrapper" id="data-list-wrapper"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/main.js" type="module"></script>
+  </body>
+</html>
