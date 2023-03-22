@@ -1,0 +1,8 @@
+.assignments{
+    display: flex;
+}
+@media screen and (max-width : 900px){
+    .assignments{
+        flex-direction: column;
+    }
+}
