@@ -61,7 +61,7 @@ function displayAss(name, desc, course, type, schedule, sprint) {
     let opt4 = document.createElement("option");
     opt4.textContent = "sprint-4";
     opt4.setAttribute("value", "sprint-4");
-    // opt4.setAttribute("selected","selected");
+    opt4.setAttribute("selected","selected");
     select.append(opt1, opt2, opt3, opt4);
     select.addEventListener("change", (e) => {
         e.preventDefault();
