@@ -17,9 +17,9 @@ scourse.addEventListener("change",()=>{
 })
 
 
-display("JS101")
-function display(course){
-  let filtered= dArr.filter((e)=>{
+display("JS101",dArr)
+function display(course,arr){
+  let filtered= arr.filter((e)=>{
     if(e.course==course){
         return true
     }
@@ -62,13 +62,19 @@ function displayAss(name,desc,course,type,schedule,sprint){
     select.addEventListener("change",()=>{
      let a = select.value;
      intosprint(a,div);
+     dArr.forEach((el)=>{
+        if(el.name==name && el.desc==desc && el.course == course && el.type==type && el.schedule == schedule){
+            el.sprint = a;
+        }
+     })
+     localStorage.setItem("assignments",JSON.stringify(dArr));
     })
     let btn = document.createElement("button");
     btn.textContent= "Delete";
     btn.addEventListener("click",(e)=>{
         e.preventDefault();
         dArr = dArr.filter((el)=>{
-            if(el.name ==name && el.course == course && el.sprint ==sprint){
+            if(el.name ==name && el.course == course && el.sprint ==sprint && el.desc ==desc && el.type ==type && el.schedule==schedule){
                 return false;
             }
             else{
@@ -77,7 +83,11 @@ function displayAss(name,desc,course,type,schedule,sprint){
         })
         console.log(dArr);
         localStorage.setItem("assignments", JSON.stringify(dArr));
-        displayAss(name, desc, course, type, schedule, sprint);
+        sprint1.innerHTML = "";
+        sprint2.innerHTML = "";
+        sprint3.innerHTML = "";
+        sprint4.innerHTML = "";
+        display(course,dArr);
         
     })
     div.append(p1,p2,p3,p4,p5,p6,select,btn);
