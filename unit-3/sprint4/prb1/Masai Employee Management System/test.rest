@@ -1,0 +1,5 @@
+GET https://reqres.in/api/login HTTP/1.1
+###
+GET https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees?_sort=dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees?gender=female
+###
+GET https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-employees?sort=salary

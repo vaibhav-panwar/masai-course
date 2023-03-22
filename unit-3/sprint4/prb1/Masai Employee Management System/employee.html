@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    #token-display {
+      margin-top: 20px;
+      margin-left: 40%;
+      margin-bottom: 10px;
+    }
+    form{
+      margin-left: 40%;
+    }
+    .functions{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .sortdata{
+      margin: 20px 0px;
+    }
+    .sortdata h3{
+      margin: 10px;
+    }
+    .filterDepartment h3{
+      margin-bottom: 10px;
+    }
+
+    table{
+      width: 100%;
+      text-align: center;
+    }
+    .table{
+      margin-bottom: 20px;
+    }
+    .btn-display{
+      display: grid;
+      grid-template-columns: repeat(10,1fr);
+      width: 40%;
+      margin: auto;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <h3 id="token-display"></h3>
+  <form>
+    <input type="text" id="search">
+    <input type="submit" value="search">
+  </form>
+  <div class="functions">
+    <div class="sortdata">
+      <h3>Sort Data</h3>
+      <button id="sltoh">Sort Low to High</button>
+      <button id="shtol">Sort Hight to Low</button>
+    </div>
+    <div class="filterDepartment">
+      <h3>filter by Department</h3>
+      <button id="opr">Operations</button>
+      <button id="eng">Engineering</button>
+      <button id="mkt">Marketing</button>
+      <button id="hr">HR</button>
+      <button id="fin">Finance</button>
+    </div>
+  </div>
+
+  <div class="table">
+    <table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Gender</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <div class="btn-display"></div>
+</body>
+<script src="./scripts/employee.js"></script>
+
+</html>
