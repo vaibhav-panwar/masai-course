@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    padding: 10px 0px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    transition: all 0.2s;
+}
+nav a:hover{
+    color: red;
+    font-size: 30px;
+}

@@ -1,0 +1,44 @@
+#filter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+#filter label {
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 15px;
+}
+
+#filter select {
+    margin-right: 50px;
+    width: 100px;
+    height: 30px;
+}
+
+#sortbyage {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 25%;
+}
+
+#sortbyage button {
+    height: 5vh;
+    width: 90px;
+}
+table{
+    width: 90%;
+    text-align: center;
+   margin: 50px;
+   
+}
+th{
+    border: 1px solid black;
+    font-size: 25px;
+}
+td{
+    border: 1px solid black;
+        font-size: 20px;
+}

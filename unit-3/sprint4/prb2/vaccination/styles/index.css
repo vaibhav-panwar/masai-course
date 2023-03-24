@@ -1,0 +1,32 @@
+form {
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 40px;
+    border: 4px black solid;
+    width: 30%;
+    
+}
+
+form input {
+    width: 200px;
+    height: 20px;
+    font-size: 15px;
+}
+
+form label {
+    font-size: 20px;
+}
+
+form select {
+    width: 200px;
+    height: 30px;
+}
+#sub{
+    height: 30px;
+    
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/dashboard.css">
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./vaccinated.html">Vaccinated</a>
+    </nav>
+    <div id="filter">
+        
+            <label for="priority">Filter by Priority</label>
+            <select id="priority">
+                <option value="p0">p0</option>
+                <option value="p1">p1</option>
+                <option value="p2">p2</option>
+                <option value="p3">p3</option>
+            </select>
+            <label for="vaccine">Filter by Vaccine</label>
+            <select id="vaccine">
+                <option value="Covishield">Covishield</option>
+                <option value=" Covaxin">Covaxin</option>
+                <option value="Sputnik">Sputnik</option>
+            </select>
+        
+        <div id="sortbyage">
+            <h3>Sort by Age</h3>
+            <button id="ltoh">Low to High</button>
+            <button id="htol">High to Low</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Designantion</th>
+                        <th>Priority</th>
+                        <th>Vaccine</th>
+                        <th>OTP</th>
+                        <th>Vaccinate/Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div id="otp">
+            <h2>Enter your OTP</h2>
+            <form action="#">
+                <input type="number">
+                <input type="number" disabled />
+                <input type="number" disabled />
+                <input type="number" disabled />
+            </form>
+            <button id="votp">Verify OTP</button>
+        </div>
+    </div>
+</body>
+<script src="./scripts/dashboard.js"></script>
+
+</html>

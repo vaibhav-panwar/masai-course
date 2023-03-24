@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./vaccinated.html">Vaccinated</a>
+    </nav>
+    <form>
+        <h2>Please fill the form</h2>
+        <input type="number" name="id" id="id" placeholder="enter id">
+        <input type="text" id="name" placeholder="enter your name">
+        <input type="number"  id="age" placeholder="enter your age">
+        <select  id="desg">
+            <option value="Employee">Employee</option>
+            <option value="Student">Student</option>
+        </select>
+        <label for="priority">Select Priority</label>
+        <select id="priority">
+            <option value="p0">p0</option>
+            <option value="p1">p1</option>
+            <option value="p2">p2</option>
+            <option value="p3">p3</option>
+        </select>
+        <label for="vaccine">Select Vaccine</label>
+        <select  id="vaccine">
+            <option value="Covishield">Covishield</option>
+            <option value=" Covaxin">Covaxin</option>
+            <option value="Sputnik">Sputnik</option>
+        </select>
+        <input type="submit" id="sub">
+
+    </form>
+</body>
+<script src="./scripts/./index.js"></script>
+</html>
