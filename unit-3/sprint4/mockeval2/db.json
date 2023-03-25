@@ -53,17 +53,6 @@
       "category": "Mid Cap"
     },
     {
-      "name": "Pixoboo",
-      "sector": "Oil and Gas",
-      "price": 952,
-      "quantity": 4,
-      "createdAt": 1678717427721,
-      "id": "049z2BfT4L",
-      "userId": 2,
-      "addDate": "2023-03-13",
-      "category": "Small Cap"
-    },
-    {
       "name": "Dabvine",
       "sector": "Oil and Gas",
       "price": 1451,

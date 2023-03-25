@@ -46,6 +46,7 @@ function createrow(id,name,price,quantity,sector,category,date){
 }
 function fetchrender(pageno){
     fetch(`${stockurl}?_limit=5&_page=${pageno}`, {
+        method:'GET',
         headers: {
             'Authorization': `Bearer ${token}`
         }
