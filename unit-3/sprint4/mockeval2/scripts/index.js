@@ -1,4 +1,9 @@
 import { baseServerURL } from "../templateConstants.js"; // Make no Changes here
+window.addEventListener("load",()=>{
+    if(token==null){
+        window.location.replace = './signin.html'
+    }
+})
 let token = localStorage.getItem("auth");
 let stockurl = `${baseServerURL}/stocks`;
 let eltbody = document.querySelector("tbody");
