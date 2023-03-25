@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <style>
+    #product-container>div {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    main {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <h1>Web E-Commerce</h1>
+    <a href="./index.html">Home</a>
+    <a href="./cart.html">Cart</a>
+  </div>
+  <h1 id="alert"></h1>
+  <main>
+    <div id="filter">
+      <div id="brand-filter">
+        <h2>Filter By Brands</h2>
+        <div>
+          <input type="checkbox" id="roadster" />
+          <p>Roadster</p>
+        </div>
+        <div>
+          <input type="checkbox" id="blackberrys" />
+          <p>Blackberrys</p>
+        </div>
+        <div>
+          <input type="checkbox" id="van-heusen" />
+          <p>Van Heusen</p>
+        </div>
+        <div>
+          <input type="checkbox" id="allen-solly" />
+          <p>Allen Solly</p>
+        </div>
+        <div>
+          <input type="checkbox" id="twills" />
+          <p>Twills</p>
+        </div>
+      </div>
+      <div id="category-filter">
+        <h2>Filter By Categories</h2>
+        <div>
+          <input type="checkbox" id="men" />
+          <p>Men</p>
+        </div>
+        <div>
+          <input type="checkbox" id="women" />
+          <p>Women</p>
+        </div>
+        <div>
+          <input type="checkbox" id="homedecor" />
+          <p>Homedecor</p>
+        </div>
+        <div>
+          <input type="checkbox" id="kids" />
+          <p>Kids</p>
+        </div>
+      </div>
+    </div>
+    <div id="product-container">
+      <div>
+        <!-- Here Append All the Products  -->
+      </div>
+    </div>
+  </main>
+</body>
+<script type="module">
+  let cartArr = JSON.parse(localStorage.getItem("cart"));
+  if (cartArr == null) {
+    cartArr = [];
+  }
+  let appendDiv = document.querySelector("#product-container>div");
+  let roadster = document.getElementById("roadster");
+  let blackberrys = document.getElementById("blackberrys");
+  let vanheusen = document.getElementById("van-heusen");
+  let allensolly = document.getElementById("allen-solly");
+  let twills = document.getElementById("twills");
+  let men = document.getElementById("men");
+  let women = document.getElementById("women");
+  let kids = document.getElementById("kids");
+  let homedecor = document.getElementById("homedecor");
+  let alerta = document.getElementById("alert");
+  let url = `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products`
+  fetchRender(url);
+  function fetchRender(api) {
+    fetch(api)
+      .then((res) => res.json())
+      .then((data) => {
+        let arr = data.data;
+        appendCard(data.data, appendDiv);
+        let value = [];
+        let cvalue = [];
+        roadster.addEventListener("change", () => {
+          if (roadster.checked) {
+            value.push("roadster");
+            filters(arr, value, "brand", cvalue, "category");
+          }
+        })
+        blackberrys.addEventListener("change", () => {
+          if (blackberrys.checked) {
+            value.push("blackberrys");
+            filters(arr, value, "brand", cvalue, "category");
+          }
+        })
+        vanheusen.addEventListener("change", () => {
+          if (vanheusen.checked) {
+            value.push("van-heusen");
+            filters(arr, value, "brand", cvalue, "category");
+          }
+        })
+        allensolly.addEventListener("change", () => {
+          if (allensolly.checked) {
+            value.push("allen-solly");
+            filters(arr, value, "brand", cvalue, "category");
+          }
+        })
+        twills.addEventListener("change", () => {
+          if (twills.checked) {
+            value.push("twills");
+            filters(arr, value, "brand", cvalue, "category");
+          }
+        })
+        men.addEventListener("change", () => {
+          if (men.checked) {
+            cvalue.push("men");
+            filters(arr, value, "brand", cvalue, "category");
+          }
+        })
+        women.addEventListener("change", () => {
+          if (women.checked) {
+            cvalue.push("women");
+            filters(arr, value, "brand", cvalue, "category");
+          }
+        })
+        kids.addEventListener("change", () => {
+          if (kids.checked) {
+            cvalue.push("kids");
+            filters(arr, value, "brand", cvalue, "category");
+          }
+        })
+        homedecor.addEventListener("change", () => {
+          if (homedecor.checked) {
+            cvalue.push("homedecor");
+            filters(arr, value, "brand", cvalue, "category");
+          }
+        })
+      })
+      .catch((err) => console.error(err))
+  }
+  function appendCard(deta, where) {
+    where.innerHTML = "";
+    deta.forEach((el) => {
+      let a = createCard(el.id, el.title, el.brand, el.category, el.price, el.image);
+      where.append(a);
+    })
+  }
+  function createCard(id, title, brand, category, price, img) {
+    let card = document.createElement("div")
+    let cardimg = document.createElement("div");
+    cardimg.setAttribute("id", "card-img");
+    let image = document.createElement("img");
+    image.setAttribute("src", img);
+    image.setAttribute("alt", "product");
+    cardimg.append(image);
+    let cardbody = document.createElement("div");
+    cardbody.setAttribute("id", "card-body");
+    let tit = document.createElement("h2");
+    tit.textContent = title;
+    let bra = document.createElement("p");
+    bra.textContent = brand;
+    let cat = document.createElement("p");
+    cat.textContent = category;
+    let pri = document.createElement("p");
+    pri.textContent = price;
+    cardbody.append(tit, bra, cat, pri);
+    let add = document.createElement("button");
+    add.setAttribute("id", "add-btn");
+    add.textContent = "Add to Cart";
+    add.addEventListener("click", () => {
+      let flag = true;
+      for (let i = 0; i < cartArr.length; i++) {
+        if (id == cartArr[i].id) {
+          flag = false;
+        }
+      }
+      if (flag) {
+        let obj = {
+          id, title, brand, category, price, image: img
+        }
+        cartArr.push(obj);
+        localStorage.setItem("cart", JSON.stringify(cartArr));
+        alerta.textContent = "Product added to The cart"
+      }
+      else {
+        alerta.textContent = "Product already in the cart"
+      }
+    })
+    card.append(cardimg, cardbody, add);
+    return card;
+  }
+  function filters(arr, value, to, cvalue, tor) {
+    let c = [];
+    let filtered = arr;
+    if (value.length > 0) {
+      filtered = [];
+      for (let i = 0; i < value.length; i++) {
+        let b = arr.filter((e) => {
+          if (e[`${to}`] == `${value[i]}`) {
+            return true
+          }
+          return false
+        })
+        for (let i = 0; i < b.length; i++) {
+          filtered.push(b[i]);
+        }
+      }
+
+    }
+    if (cvalue.length == 0) {
+      appendCard(filtered, appendDiv)
+    }
+    else {
+      for (let i = 0; i < cvalue.length; i++) {
+        let sdf = filtered.filter((e) => {
+          if (e[`${tor}`] == cvalue[i]) {
+            return true
+          }
+          return false
+        })
+        for (let i = 0; i < sdf.length; i++) {
+          c.push(sdf[i]);
+        }
+      }
+      appendCard(c, appendDiv);
+
+    }
+
+
+  }
+
+</script>
+
+</html>

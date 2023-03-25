@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart Page</title>
+  <style>
+    /* All Your css for Cart page goes here  */
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <h1>Web E-Commerce</h1>
+    <a href="./index.html">Home</a>
+    <a href="./cart.html">Cart</a>
+  </div>
+  <h1 id="total">
+    Your total order value is :- <span id="cart-total">0</span>
+  </h1>
+  <div id="cart-container">
+    <!-- Here Append All the Cart Cards here-->
+  </div>
+</body>
+<script type="module">
+  let url = `https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-products`
+  let cartArr = JSON.parse(localStorage.getItem("cart"));
+  if (cartArr == null) {
+    cartArr = [];
+  }
+  let appendDiv = document.getElementById("cart-container");
+  let total = document.getElementById("cart-total");
+  let sum = 0;
+  for (let i = 0; i < cartArr.length; i++) {
+    sum = sum + cartArr[i].price;
+  }
+  total.textContent = sum
+  for (let i = 0; i < cartArr.length; i++) {
+    fetch(`${url}/${cartArr[i].id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        let arr= data.data
+        let a = createCard(arr.title,arr.brarrnd,arr.category,arr.price,arr.image)
+        appendDiv.append(a);
+      })
+  }
+  function createCard(title, brand, category, price, img) {
+      let card = document.createElement("div")
+      let cardimg = document.createElement("div");
+      cardimg.setAttribute("id", "card-img");
+      let image = document.createElement("img");
+      image.setAttribute("src", img);
+      image.setAttribute("alt", "product");
+      cardimg.append(image);
+      let cardbody = document.createElement("div");
+      cardbody.setAttribute("id", "card-body");
+      let tit = document.createElement("h2");
+      tit.textContent = title;
+      let bra = document.createElement("p");
+      bra.textContent = brand;
+      let cat = document.createElement("p");
+      cat.textContent = category;
+      let pri = document.createElement("p");
+      pri.textContent = price;
+      cardbody.append(tit, bra, cat, pri);
+      card.append(cardimg, cardbody);
+      return card;
+    }
+</script>
+
+</html>
