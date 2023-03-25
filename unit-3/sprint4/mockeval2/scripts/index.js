@@ -44,8 +44,8 @@ function createrow(id,name,price,quantity,sector,category,date){
     tr.append(td1,td2,td3,td4,td5,td6,td7,td8);
     return tr
 }
-function fetchrender(pageno){
-    fetch(`${stockurl}?_limit=5&_page=${pageno}`, {
+function fetchrender(){
+    fetch(`${stockurl}`, {
         method:'GET',
         headers: {
             'Authorization': `Bearer ${token}`
