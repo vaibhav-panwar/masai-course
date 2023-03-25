@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/navbar.css">
+  <link rel="stylesheet" href="./styles/table.css">
+  <title>Stock App</title>
+</head>
+
+<body>
+  <div id="navbar">
+    <h2>Masai Stocks App</h2>
+    <div>
+      <a href="./index.html">
+        <h2>Home</h2>
+      </a>
+      <a href="./newStock.html">
+        <h2>New Stock</h2>
+      </a>
+    </div>
+  </div>
+  <select id="filter">
+    <option value="">Stock Category</option>
+    <option value="Large Cap">Large Cap</option>
+    <option value="Mid Cap">Mid Cap</option>
+    <option value="Small Cap">Small Cap</option>
+  </select>
+  <table>
+    <thead>
+      <tr>
+        <th>Stock Name</th>
+        <th>Category</th>
+        <th>Sector</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total Cost</th>
+        <th>Add Date</th>
+        <th>Sell</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Update the rows here using jsvascript -->
+    </tbody>
+  </table>
+  <div id="pagination"></div>
+</body>
+<script src="./scripts/index.js" type="module"></script>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Stocks</title>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/form.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <h2>Masai Stocks App</h2>
+        <div>
+            <a href="./index.html">
+                <h2>Home</h2>
+            </a>
+            <a href="./newStock.html">
+                <h2>New Stock</h2>
+            </a>
+        </div>
+    </div>
+
+    <form>
+        <input placeholder="Company Name" id="name" type="text" />
+        <select id="category">
+            <option value="">Stock Category</option>
+            <option value="Large Cap">Large Cap</option>
+            <option value="Mid Cap">Mid Cap</option>
+            <option value="Small Cap">Small Cap</option>
+        </select>
+        <input type="text" id="sector" placeholder="Sector" />
+        <input placeholder="Stock Price" id="price" type="number" />
+        <input placeholder="Quantity" id="quantity" type="number" />
+        <label for="">Add Date:- </label>
+        <input type="date" id="addDate" />
+        <input type="submit" value="Add Stock" />
+    </form>
+</body>
+<script type="module" src="./scripts/newStock.js"></script>
+
+</html>
