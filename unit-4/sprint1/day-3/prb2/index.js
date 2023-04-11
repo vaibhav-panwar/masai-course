@@ -16,7 +16,7 @@ const PORT = 7700;
 //     }
 
 const server = http.createServer((req, res) => {
-    let link = "C:/Users/admin/Desktop/masai-course/unit-4/sprint1/day-3/prb2";
+    let link = process.argv[1];
     let a = fs.readdirSync(link);
     res.setHeader('content-type', 'text/html')
     if (req.url == "/") {
