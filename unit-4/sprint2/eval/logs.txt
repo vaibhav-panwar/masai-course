@@ -1,0 +1,16 @@
+GET / -
+POST /marvel/addnew -
+POST /dc/addnew -
+GET /marvel -
+GET /marvel?alias=Black%20Widow -
+GET /dc -
+GET /dc?alias=Batman -
+GET /marvel/1 -
+GET /dc/1 -
+GET /winningteam -
+PATCH /marvel/update/1?role=leader&pass=4534 -
+PATCH /dc/update/1?role=leader&pass=4534 -
+DELETE /marvel/delete/1?role=leader&pass=4534 -
+DELETE /dc/delete/1?role=leader&pass=4534 -
+GET / -
+PATCH /dc/update/2 -
