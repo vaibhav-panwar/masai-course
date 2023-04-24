@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+require('dotenv').config()
 
-let connection = mongoose.connect("mongodb+srv://vaibhav:panwar@vaibhavpanwar.lkqlupf.mongodb.net/football?retryWrites=true&w=majority");
+let connection = mongoose.connect(process.env.mongoURL);
 
 let playerSchema = mongoose.Schema({
     "player_name": {

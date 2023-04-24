@@ -6,6 +6,7 @@ const{log} = require("./middleware/log_middleware")
 const app = express();
 app.use(express.json());
 app.use(log);
+
 app.use("/player",playerRouter);
 
 
