@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/signup.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./signUp.html">Sign Up</a>
+        <a href="./login.html">Log In</a>
+        <div id="cont">
+            <h3 id="uname"></h3>
+            <h3 id="logout"></h3>
+        </div>
+    </nav>
+    <form>
+        <input type="text" id="username" placeholder="enter username">
+        <input type="email" id="email" placeholder="enter email">
+        <div class="label">
+            <label for="date">Date Of Birth</label>
+            <input type="date" id="date">
+        </div>
+        <div>
+            <label for="role">Select Role</label>
+            <select id="role">
+                <option value="Admin">Admin</option>
+                <option value="Explorer">Explorer</option>
+            </select>
+        </div>
+
+        <input type="text" id="location" placeholder="enter location">
+        <input type="password" id="pass1" placeholder="enter password">
+        <input type="password" id="pass2" placeholder="enter password again">
+        <input type="submit">
+    </form>
+</body>
+<script src="./scripts/signup.js"></script>
+<script>
+    let a = localStorage.getItem("userN");
+    let uname = document.getElementById("uname");
+    let lo = document.getElementById("logout");
+    if (a) {
+        uname.innerText = a;
+        lo.innerText = "Log Out";
+    }
+    lo.addEventListener("click", () => {
+        localStorage.setItem("userN", "");
+        window.location.reload();
+    })
+
+</script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/about.css">
+    <title>About</title>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./signUp.html">Sign Up</a>
+        <a href="./login.html">Log In</a>
+        <div id="cont">
+            <h3 id="uname"></h3>
+            <h3 id="logout"></h3>
+        </div>
+    </nav>
+    <div id="bigcont">
+        <div class="card" id="head">
+            <h1>Welcome</h1>
+            <p>This is about page , this is my first full stack project <br> it basically focuses on login and registration functionality</p>
+        </div>
+        <div class="card">
+            <p>this is the signup page to add data in the backend</p>
+            <img src="./images/1.PNG" alt="img">
+        </div>
+        <div class="card">
+            <p>if you enter the details correctly you will recieve an alert like this <br>that data is added in the backend</p>
+            <img src="./images/2.PNG" alt="img">
+        </div>
+        <div class="card">
+            <p>if the password in the both input fields are not same <br>you will recieve a notification like this</p>
+            <img src="./images/3.PNG" alt="img">
+        </div>
+        <div class="card">
+            <p>now on login page . if you enter wrong credentials <br>you will recieve this notification</p>
+            <img src="./images/4.PNG" alt="img">
+        </div>
+        <div class="card">
+            <p>if you enter credential correctly you will recieve this notification</p>
+            <img src="./images/5.PNG" alt="img">
+        </div>
+        <div class="card">
+            <p>after login you will be redirected to home page and your nav bar will loke like this <br> you can click on log out and username will not appear on navbar</p>
+            <img src="./images/6.PNG" alt="img">
+        </div>
+    </div>
+</body>
+<script>
+    let a = localStorage.getItem("userN");
+    let uname = document.getElementById("uname");
+    let lo = document.getElementById("logout");
+    if (a) {
+        uname.innerText = a;
+        lo.innerText = "Log Out";
+    }
+    lo.addEventListener("click", () => {
+        localStorage.setItem("userN", "");
+        window.location.reload();
+    })
+
+</script>
+
+</html>

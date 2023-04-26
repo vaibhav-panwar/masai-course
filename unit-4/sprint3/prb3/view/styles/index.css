@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    background-color: aqua;
+}
+
+nav a {
+    font-size: 23px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.1s;
+}
+
+nav>a:hover {
+    font-size: 25px;
+    color: red;
+}
+
+#cont {
+    display: flex
+}
+
+#uname {
+    font-size: 23px;
+    text-decoration: none;
+    font-weight: 200;
+    margin-right: 40px;
+}
+
+#logout {
+    font-size: 23px;
+    text-decoration: none;
+    font-weight: 200;
+    transition: all 0.1s;
+}
+
+#logout:hover {
+    font-size: 25px;
+    color: red;
+    cursor: pointer;
+}
+
+#body {
+    background-image: url(../images/pxfuel.jpg);
+    height: 91.3vh;
+}
+
+#body h1 {
+    padding-top: 50px;
+    padding-left: 50px;
+    color: yellow;
+}

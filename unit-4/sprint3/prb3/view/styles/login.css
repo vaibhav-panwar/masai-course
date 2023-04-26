@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    background-color: aqua;
+}
+
+nav a {
+    font-size: 23px;
+    text-decoration: none;
+    color: black;
+    transition: all 0.1s;
+}
+
+nav>a:hover {
+    font-size: 25px;
+    color: red;
+}
+
+#cont {
+    display: flex
+}
+
+#uname {
+    font-size: 23px;
+    text-decoration: none;
+    font-weight: 200;
+    margin-right: 40px;
+}
+
+#logout {
+    font-size: 23px;
+    text-decoration: none;
+    font-weight: 200;
+    transition: all 0.1s;
+}
+
+#logout:hover {
+    font-size: 25px;
+    color: red;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30vh;
+    margin: auto;
+    margin-top: 50px;
+    width: 50vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

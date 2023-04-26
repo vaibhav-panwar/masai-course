@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/login.css">
+    <title>Log In</title>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./signUp.html">Sign Up</a>
+        <a href="./login.html">Log In</a>
+        <div id="cont">
+            <h3 id="uname"></h3>
+            <h3 id="logout"></h3>
+        </div>
+    </nav>
+    <form >
+        <div class="label">
+            <label for="username">Enter username</label>
+            <input type="text" id="username">
+        </div>
+        <div>
+            <label for="pass">Enter password</label>
+            <input type="password" id="pass">
+        </div>
+         <input type="submit">
+    </form>
+</body>
+<script src="./scripts/login.js"></script>
+<script>
+    let a = localStorage.getItem("userN");
+    let uname = document.getElementById("uname");
+    let lo = document.getElementById("logout");
+    if (a) {
+        uname.innerText = a;
+        lo.innerText = "Log Out";
+    }
+    lo.addEventListener("click", () => {
+        localStorage.setItem("userN", "");
+        window.location.reload();
+    })
+</script>
+</html>
