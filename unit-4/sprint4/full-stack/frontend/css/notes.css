@@ -1,0 +1,89 @@
+#bigcont{
+    display: flex;
+}
+#firstdiv{
+    width: 60%;
+}
+#seconddiv{
+    width: 35%;
+    visibility: hidden;
+}
+form {
+    width: 90%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    height: 60vh;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+}
+
+form div label {
+    font-size: 20px;
+}
+
+form div input {
+    height: 20px;
+    width: 250px;
+}
+
+#textarea {
+    display: block;
+}
+
+#textarea label {
+    display: block;
+}
+
+#submit {
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+}
+#firstdiv{
+    padding: 20px;
+}
+
+#firstdiv>h1{
+    width: 250px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.card{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+}
+.title{
+    display: flex;
+    
+}
+.title>p{
+    margin: 10px;
+    margin-right: 20px;
+}
+.content{
+    padding: 10px;
+    margin: 0px 10px 10px 10px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.link{
+    margin: 0px 10px 10px 10px;
+}
+.link a{
+    margin-right: 20px;
+}
