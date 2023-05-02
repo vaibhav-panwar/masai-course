@@ -7,8 +7,45 @@ blogRouter.use(auth);
 
 blogRouter.get("/",async(req,res)=>{
     let {userID} = req.body;
-    let data = await BlogModel.find({userID});
-    res.status(200).send(data);
+    let {limit,pageno,category,title} = req.query;
+    if(limit && pageno){
+      let skip = (pageno-1)*limit;
+      if(category && title){
+          let data = await BlogModel.find({ userID,category,title }).limit(limit).skip(skip);
+          res.status(200).send(data)
+      }
+      else if(category && (!title)){
+          let data = await BlogModel.find({ userID, category }).limit(limit).skip(skip);
+          res.status(200).send(data)
+      }
+      else if(title && (!category)){
+          let data = await BlogModel.find({ userID,title }).limit(limit).skip(skip);
+          res.status(200).send(data)
+      }
+      else{
+          let data = await BlogModel.find({ userID }).limit(limit).skip(skip);
+          res.status(200).send(data)
+      }
+    }
+    else{
+        if (category && title) {
+            let data = await BlogModel.find({ userID, category, title });
+            res.status(200).send(data)
+        }
+        else if (category && (!title)) {
+            let data = await BlogModel.find({ userID, category });
+            res.status(200).send(data)
+        }
+        else if (title && (!category)) {
+            let data = await BlogModel.find({ userID, title });
+            res.status(200).send(data)
+        }
+        else {
+            let data = await BlogModel.find({ userID });
+            res.status(200).send(data)
+        }
+    }
+    
 })
 
 blogRouter.post("/add",async(req,res)=>{

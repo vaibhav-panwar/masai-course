@@ -2,9 +2,10 @@ const {Router} = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const {UserModel} = require("../model/user.model");
+const { unique } = require("../middleware/unique.middleware");
 
 const userRouter = Router();
-
+userRouter.use(unique);
 userRouter.post("/register",async(req,res)=>{
     let {name,age,city,email,password} = req.body;
     try {
