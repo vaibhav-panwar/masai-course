@@ -7,6 +7,8 @@ const blogSchema = mongoose.Schema({
     userID: { type: String, required: true },
     category: { type: String, required: true },
     live: { type: Boolean, required: true }
+},{
+    versionKey:false
 })
 
 const BlogModel = mongoose.model("blog",blogSchema);
