@@ -1,0 +1,3 @@
+query 1 :db.customer.aggregate([{$group:{_id:"$name",totalOrder:{$sum:{$size:"$orders"}}}}])
+query 2 :db.customer.aggregate([{$lookup:{from:"food_data",localField:"orders.foodId",foreignField:"_id",as:"foodItems"}},{$project:{_id:0,fooditem:"$foodItems.name",buyerName:"$name",quantity:"$orders.quantity"}}])
+query 3 :db.customer.aggregate([{$sort:{"orders.orderDate":-1}},{$group:{_id:"$name",mostRecent:{$first:"$orders.orderDate"}}}])
