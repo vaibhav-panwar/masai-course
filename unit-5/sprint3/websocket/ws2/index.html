@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting App</title>
+    <style>
+        #box {
+            display: flex;
+        }
+
+        .candidates {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div class="candidates">
+            <div id="bjp">
+                <h1>BJP</h1>
+                <h2>Votes: <span id="bvote"></span></h2>
+            </div>
+            <div id="cong">
+                <h1>Congress</h1>
+                <h2>Votes: <span id="cvote"></span></h2>
+            </div>
+            <div id="aap">
+                <h1>AAP</h1>
+                <h2>Votes: <span id="avote"></span></h2>
+            </div>
+        </div>
+        <div class="voting">
+            <h1>Vote for Your Party</h1>
+            <div id="bjpvote">
+                <input type="radio" value="bjp" name="voting" class="bot">
+                <label for="bjp">BJP</label>
+            </div>
+            <div id="congvote">
+                <input type="radio" value="cong" name="voting" class="bot">
+                <label for="cong">Congress</label>
+            </div>
+            <div id="aapvote">
+                <input type="radio" value="aap" name="voting" class="bot">
+                <label for="aap">AAP</label>
+            </div>
+            <button id="sub">Submit</button>
+        </div>
+    </div>
+</body>
+<script>
+    const send = document.getElementById("sub");
+    const bots = document.getElementsByClassName('bot');
+    const socket = new WebSocket('ws://localhost:9000')
+    socket.onopen = () => {
+        console.log('connection established')
+        send.addEventListener("click", () => {
+            let a = checkButton();
+            socket.send(a);
+            alert(a);
+        })
+    }
+    socket.onmessage = (message) => {
+        console.log(message.data)
+        let a = JSON.parse(message.data);
+        document.getElementById("bvote").innerText = a.bjpcount
+        document.getElementById("cvote").innerText = a.congcount
+        document.getElementById("avote").innerText = a.aapcount
+    }
+
+    function checkButton() {
+        var getSelectedValue = document.querySelector(
+            'input[name="voting"]:checked');
+        if (getSelectedValue != null) {
+            return getSelectedValue.value
+        }
+        else {
+            alert("*You have not selected any season")
+            return null
+        }
+    }
+
+</script>
+
+</html>
