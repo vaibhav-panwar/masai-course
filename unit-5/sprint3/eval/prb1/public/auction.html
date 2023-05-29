@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+        integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+        crossorigin="anonymous"></script>
+    <title>Auction System</title>
+    <style>
+        body>h1 {
+            text-align: center;
+        }
+
+        #box {
+            display: flex;
+            padding: 20px;
+        }
+
+        #sbox1 {
+            width: 50%;
+        }
+
+        #sbox2>form {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+        }
+
+        form>input {
+            margin: 10px;
+            width: 200px;
+            height: 30px;
+        }
+
+        input[type="submit"] {
+            width: 80px;
+            background-color: orangered;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the Auction</h1>
+    <div id="box">
+        <div id="sbox1">
+            <h1>Auction item : <span id="item"></span></h1>
+            <h2>Highest bid : <span id="hb"></span></h2>
+            <h2>Highest Bidder : <span id="hn"></span></h2>
+        </div>
+        <div id="sbox2">
+            <form>
+                <input type="text" placeholder="Enter Your Name" id="name">
+                <input type="text" placeholder="Enter Your Mobile Number" id="mob">
+                <input type="text" placeholder="Enter Your Bid" id="bid">
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</body>
+<script src="./script/index.js"></script>
+
+</html>
