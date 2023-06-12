@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <nav>
+        <a href="http://localhost:8080/">Store Message</a>
+        <a href="http://localhost:8080/message">Get Message</a>
+    </nav>
+
+    <form>
+        <input type="text" placeholder="Enter your secret key" id="skey">
+        <input type="text" placeholder="Enter your message" id="msg">
+        <input type="submit">
+    </form>
+</body>
+<script>
+    document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        let obj ={
+            secretkey:document.getElementById("skey").value,
+            message:document.getElementById("msg").value
+        }
+        console.log(obj);
+        fetch("http://localhost:8080/storemsg",{
+            method:'POST',
+            headers: {
+                "Content-type": "application/json"
+            },
+            body:JSON.stringify(obj)
+        })
+        .then((res)=>res.json())
+        .then((data)=>{
+            alert(data.msg);
+        })
+        .catch((err)=>{
+            alert(err);
+            console.log(err)
+        })
+    })
+</script>
+
+</html>
