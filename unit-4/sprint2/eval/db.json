@@ -1,77 +1,76 @@
 {
-  "marvel": [
-    {
-      "id": 1,
-      "name": "Bruce Banner",
-      "alias": "Hulk",
-      "power_level": 8,
-      "role": "member"
-    },
-    {
-      "id": 2,
-      "name": "Tony Stark",
-      "alias": "Iron Man",
-      "power_level": 7,
-      "role": "leader"
-    },
-    {
-      "id": 3,
-      "name": "Steeve Rogers",
-      "alias": "Captain America",
-      "power_level": 7,
-      "role": "leader"
-    },
-    {
-      "id": 4,
-      "name": "Wanda Maximoff",
-      "alias": "Scarlet Witch",
-      "power_level": 10,
-      "role": "member"
-    },
-    {
-      "id": 5,
-      "name": "Natasha",
-      "alias": "Black Widow",
-      "power_level": 5,
-      "role": "member"
-    }
-  ],
-
-  "dc": [
-    {
-      "id": 1,
-      "name": "Barry Allen",
-      "alias": "Flash",
-      "power_level": 7,
-      "role": "member"
-    },
-    {
-      "id": 2,
-      "name": "Damian Wayne",
-      "alias": "Robin",
-      "power_level": 4,
-      "role": "member"
-    },
-    {
-      "id": 3,
-      "name": "Clark Kent",
-      "alias": "Superman",
-      "power_level": 10,
-      "role": "member"
-    },
-    {
-      "id": 4,
-      "name": "Oliver Queen",
-      "alias": "Green Arrow",
-      "power_level": 4,
-      "role": "member"
-    },
-    {
-      "id": 5,
-      "name": "Bruce Wayne",
-      "alias": "Batman",
-      "power_level": 8,
-      "role": "leader"
-    }
-  ]
+    "marvel": [
+        {
+            "id": 1,
+            "name": "Bruce Banner",
+            "alias": "Hulk",
+            "power_level": 8,
+            "role": "member"
+        },
+        {
+            "id": 2,
+            "name": "Tony Stark",
+            "alias": "Iron Man",
+            "power_level": 7,
+            "role": "leader"
+        },
+        {
+            "id": 3,
+            "name": "Steeve Rogers",
+            "alias": "Captain America",
+            "power_level": 7,
+            "role": "leader"
+        },
+        {
+            "id": 4,
+            "name": "Wanda Maximoff",
+            "alias": "Scarlet Witch",
+            "power_level": 10,
+            "role": "member"
+        },
+        {
+            "id": 5,
+            "name": "Natasha",
+            "alias": "Black Widow",
+            "power_level": 5,
+            "role": "member"
+        }
+    ],
+    "dc": [
+        {
+            "id": 1,
+            "name": "Barry Allen",
+            "alias": "Flash",
+            "power_level": 7,
+            "role": "member"
+        },
+        {
+            "id": 2,
+            "name": "Damian Wayne",
+            "alias": "Robin",
+            "power_level": 4,
+            "role": "member"
+        },
+        {
+            "id": 3,
+            "name": "Clark Kent",
+            "alias": "Superman",
+            "power_level": 10,
+            "role": "member"
+        },
+        {
+            "id": 4,
+            "name": "Oliver Queen",
+            "alias": "Green Arrow",
+            "power_level": 4,
+            "role": "member"
+        },
+        {
+            "id": 5,
+            "name": "Bruce Wayne",
+            "alias": "Batman",
+            "power_level": 8,
+            "role": "leader"
+        }
+    ]
 }

@@ -14,3 +14,27 @@ DELETE /marvel/delete/1?role=leader&pass=4534 -
 DELETE /dc/delete/1?role=leader&pass=4534 -
 GET / -
 PATCH /dc/update/2 -
+GET / Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36
+GET / Thunder Client (https://www.thunderclient.com)
+GET /marvel Thunder Client (https://www.thunderclient.com)
+GET /marvel?alias=Hulk Thunder Client (https://www.thunderclient.com)
+GET /dc Thunder Client (https://www.thunderclient.com)
+GET /dc?alias=Flash Thunder Client (https://www.thunderclient.com)
+GET /marvel/1 Thunder Client (https://www.thunderclient.com)
+GET /marvel/2 Thunder Client (https://www.thunderclient.com)
+GET /marvel/3 Thunder Client (https://www.thunderclient.com)
+GET /dc/1 Thunder Client (https://www.thunderclient.com)
+GET /dc/2 Thunder Client (https://www.thunderclient.com)
+POST /dc/2 Thunder Client (https://www.thunderclient.com)
+POST /dc/addnew Thunder Client (https://www.thunderclient.com)
+POST /marvel/addnew Thunder Client (https://www.thunderclient.com)
+POST /marvel/update/6 Thunder Client (https://www.thunderclient.com)
+PATCH //marvel/update/6 Thunder Client (https://www.thunderclient.com)
+PATCH /marvel/update/6 Thunder Client (https://www.thunderclient.com)
+PATCH /dc/update/6 Thunder Client (https://www.thunderclient.com)
+DELETE /dc/delete/6 Thunder Client (https://www.thunderclient.com)
+DELETE /dc/marvel/6 Thunder Client (https://www.thunderclient.com)
+DELETE /dc/marvel/6 Thunder Client (https://www.thunderclient.com)
+DELETE /marvel/delete/6 Thunder Client (https://www.thunderclient.com)
+DELETE /winningteam Thunder Client (https://www.thunderclient.com)
+GET /winningteam Thunder Client (https://www.thunderclient.com)

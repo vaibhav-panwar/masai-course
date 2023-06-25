@@ -170,8 +170,8 @@ app.get("/winningteam", (req, res) => {
         res.send(data.dc);
     }
 })
-// app.listen(8080)
+app.listen(8080)
 
 // Do not forget to export the server.
 // e.g =>
- module.exports = app;
+//  module.exports = app;

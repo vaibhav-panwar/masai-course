@@ -8,6 +8,7 @@ var yodasay = require('yodasay');
 
 
 
+
 let server = http.createServer((req, res) => {
     if (req.url == "/") {
         res.setHeader('content-type', 'text/html');
@@ -21,19 +22,20 @@ let server = http.createServer((req, res) => {
             else {
                 let m = 0;
                 let f = 0;
-                for(let i=0;i<data.length;i++){
-                    if(data[i].gender=="male"){
+                data = JSON.parse(data);
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i].gender == "Male") {
                         m++;
                     }
-                    else if (data[i].gender=="female"){
+                    else if (data[i].gender == "Female") {
                         f++;
                     }
                 }
-                fs.appendFile("./logs.txt", `The initial Male count is ${m} and Female count is ${f} at ${new Date()}`,(err)=>{
-                    if(err){
+                fs.appendFile("./logs.txt", `The initial Male count is ${m} and Female count is ${f} at ${new Date()}\n`, (err) => {
+                    if (err) {
                         res.end(err);
                     }
-                    else{
+                    else {
                         res.end("The count has been updated in the logs file");
                     }
                 })
@@ -41,29 +43,35 @@ let server = http.createServer((req, res) => {
         })
     }
     else if (req.url == "/addnew") {
-        fs.appendFile('./data.json', `{
-          "id":" ${crypto.randomBytes(4).toString("binary")}",
-          "first_name" : "${os.userInfo().username}",
-          "last_name" : "${os.userInfo().username}",
-          "email" : "abc@gmail.com",
-          "gender" : "female"
-        }`, (err) => {
+        let a = fs.readFileSync("./data.json", "utf-8");
+        let data = {
+            "id": crypto.randomBytes(4).toString("binary"),
+            "first_name": os.userInfo().username,
+            "last_name": os.userInfo().username,
+            "email": "abc@gmail.com",
+            "gender": "female"
+        }
+        a = JSON.parse(a);
+        a.push(data);
+        fs.writeFile("./data.json", JSON.stringify(a), (err) => {
             if (err) {
                 res.end(err);
             }
             else {
-                res.end("The data has been updated, go and check the data file")
+                res.end("The data has been updated, go and check the data file");
             }
         })
     }
     else if (req.url == "/people") {
 
-            let a = fs.readFile('./data.json', "utf-8");
-            a.forEach((el) => {
-                fs.appendFile('./people.txt', `\n First Name: ${el.first_name} Last Name: ${el.last_name} Gender: ${el.gender} Email: ${el.email}`);
-            })
-            res.end("The file has been created and data has been entered")
-        
+        let a = fs.readFileSync('./data.json', "utf-8");
+        a = JSON.parse(a);
+        a.forEach((el) => {
+            fs.appendFileSync('./people.txt', `First Name: ${el.first_name} Last Name: ${el.last_name} Gender: ${el.gender} Email: ${el.email}\n`);
+        })
+        res.setHeader('content-type', 'text/html');
+        res.end("The file has been created and data has been entered")
+
     }
     else if (req.url == "/address") {
         dns.lookup("masaischool.com", (err, address, family) => {
@@ -82,10 +90,10 @@ let server = http.createServer((req, res) => {
             }
         })
     }
-    else if (req.url == "./yoda") {
+    else if (req.url == "/yoda") {
         let a = fs.readFileSync("./people.txt", "utf-8");
         res.end(yodasay.say({
-            text: a
+            text: JSON.stringify(a)
         }))
     }
 
@@ -98,4 +106,4 @@ let server = http.createServer((req, res) => {
 // })
 
 
-  module.exports = server;
+//   module.exports = server;

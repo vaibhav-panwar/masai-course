@@ -7,7 +7,6 @@ const { accessLogStream } = require("./middleware/log.middleware");
 var morgan = require('morgan')
 require('dotenv').config();
 
-
 const app = express();
 app.use(express.json());
 app.use(limiter);

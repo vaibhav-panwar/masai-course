@@ -13,6 +13,7 @@ function fetchRender(api, pageNo) {
   fetch(`${api}?_limit=10&_page=${pageNo}`)
     .then((res) => {
       let totalPost = res.headers.get('X-Total-Count');
+      console.log(totalPost);
       let totalBtn = Math.ceil(totalPost / 10);
       btnWrap.innerHTML = "";
       for (let i = 1; i <= totalBtn; i++) {
