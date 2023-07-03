@@ -34,15 +34,21 @@ export class User extends Model implements IUser {
     this.bio = bio;
     this.email = email;
     this.follows = [];
-    Database.Instance?.create({model:DatabaseModel.users,data:{
-      model:this.model,
-      id:this.id,
-      name:this.name,
-      bio:this.bio,
-      email:this.email,
-      follows:this.follows
-    }})
-}
+    Database.Instance?.create({
+      model: DatabaseModel.users, data: {
+        model: this.model,
+        id: this.id,
+        name: this.name,
+        bio: this.bio,
+        email: this.email,
+        follows: this.follows
+      }
+    })
+  }
+  createPost(image: string, content: string) {
+    let a = new Post(image,content,this.id);
+    return a;
+  }
 }
 
 interface IPost extends IModel {
@@ -69,6 +75,14 @@ export class Post extends Model implements IPost {
       }
     })
   }
+  Comment(){
+    let a  = new Comment(this.content,this.userID,this.id);
+    return a
+  }
+  Like(userID:number){
+    let a = new Like("POST",userID,this.id);
+    return a
+  }
 }
 
 interface IComment extends IModel {
@@ -76,11 +90,11 @@ interface IComment extends IModel {
   userID: number;
   postID: number;
 }
-export class Comment extends Model implements IComment{
+export class Comment extends Model implements IComment {
   content: string;
   userID: number;
   postID: number;
-  constructor(content: string,userID: number,postID: number){
+  constructor(content: string, userID: number, postID: number) {
     super(DatabaseModel.comments)
     this.content = content;
     this.postID = postID;
@@ -95,9 +109,13 @@ export class Comment extends Model implements IComment{
       }
     })
   }
+  Like(userID:number) {
+    let a = new Like("COMMENT", userID, this.id);
+    return a
+  }
 }
 
-interface ILike extends IModel{
+interface ILike extends IModel {
   type: "POST" | "COMMENT";
   userID: number;
   parentID: number;
@@ -106,7 +124,7 @@ export class Like extends Model implements ILike {
   type: "POST" | "COMMENT";
   userID: number;
   parentID: number;
-  constructor(type: "POST" | "COMMENT",userID: number,parentID: number){
+  constructor(type: "POST" | "COMMENT", userID: number, parentID: number) {
     super(DatabaseModel.likes)
     this.type = type;
     this.userID = userID;
@@ -125,20 +143,20 @@ export class Like extends Model implements ILike {
 }
 
 type DatabaseMapping = {
-  model:DatabaseModel.users;
+  model: DatabaseModel.users;
   data: IUser;
-}|
+} |
 {
-  model:DatabaseModel.comments;
-  data:IComment;
-}|
+  model: DatabaseModel.comments;
+  data: IComment;
+} |
 {
-  model:DatabaseModel.posts;
-  data:IPost;
-}|
+  model: DatabaseModel.posts;
+  data: IPost;
+} |
 {
-  model:DatabaseModel.likes;
-  data:ILike;
+  model: DatabaseModel.likes;
+  data: ILike;
 }
 
 export class Database {
@@ -153,23 +171,23 @@ export class Database {
     this.comments = [];
     this.likes = [];
   }
-  get Users(){
+  get Users() {
     return this.users;
   }
-  get Posts(){
+  get Posts() {
     return this.posts;
   }
-  get Comments(){
+  get Comments() {
     return this.comments;
   }
-  get Likes(){
+  get Likes() {
     return this.likes;
   }
-  create({model,data}:DatabaseMapping){
-    if(model===DatabaseModel.users){
+  create({ model, data }: DatabaseMapping) {
+    if (model === DatabaseModel.users) {
       this.users.push(data)
     }
-    else if(model === DatabaseModel.posts){
+    else if (model === DatabaseModel.posts) {
       this.posts.push(data)
     }
     else if (model === DatabaseModel.likes) {
@@ -179,11 +197,11 @@ export class Database {
       this.comments.push(data)
     }
   }
-  upsert({ model, data }: DatabaseMapping){
+  upsert({ model, data }: DatabaseMapping) {
 
   }
-  delete({ model, data }: DatabaseMapping){
-    
+  delete({ model, data }: DatabaseMapping) {
+
   }
   static connect() {
     if (Database.Instance === null) {
