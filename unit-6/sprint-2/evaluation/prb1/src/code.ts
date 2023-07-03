@@ -75,8 +75,17 @@ export class Post extends Model implements IPost {
       }
     })
   }
-  Comment(){
-    let a  = new Comment(this.content,this.userID,this.id);
+  get likes(){
+    let count = 0;
+    Database.Instance?.Likes.forEach((like)=>{
+      if(like.parentID === this.id){
+        count++;
+      }
+    })
+    return count
+  }
+  Comment(userID: number){
+    let a  = new Comment(this.content,userID,this.id);
     return a
   }
   Like(userID:number){
@@ -108,6 +117,15 @@ export class Comment extends Model implements IComment {
         userID: this.userID
       }
     })
+  }
+  get likes() {
+    let count = 0;
+    Database.Instance?.Likes.forEach((like) => {
+      if (like.parentID === this.id) {
+        count++;
+      }
+    })
+    return count
   }
   Like(userID:number) {
     let a = new Like("COMMENT", userID, this.id);
@@ -209,5 +227,4 @@ export class Database {
     }
     return Database.Instance;
   }
-
 }
