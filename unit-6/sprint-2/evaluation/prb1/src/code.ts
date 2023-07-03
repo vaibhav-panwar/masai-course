@@ -179,6 +179,12 @@ export class Database {
       this.comments.push(data)
     }
   }
+  upsert({ model, data }: DatabaseMapping){
+
+  }
+  delete({ model, data }: DatabaseMapping){
+    
+  }
   static connect() {
     if (Database.Instance === null) {
       Database.Instance = new Database();
