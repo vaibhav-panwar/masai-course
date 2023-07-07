@@ -46,7 +46,7 @@ export class User extends Model implements IUser {
     })
   }
   createPost(image: string, content: string) {
-    let a = new Post(image,content,this.id);
+    let a = new Post(image, content, this.id);
     return a;
   }
 }
@@ -75,21 +75,21 @@ export class Post extends Model implements IPost {
       }
     })
   }
-  get likes(){
+  get likes() {
     let count = 0;
-    Database.Instance?.Likes.forEach((like)=>{
-      if(like.parentID === this.id){
+    Database.Instance?.Likes.forEach((like) => {
+      if (like.parentID === this.id) {
         count++;
       }
     })
     return count
   }
-  Comment(userID: number){
-    let a  = new Comment(this.content,userID,this.id);
+  Comment(userID: number) {
+    let a = new Comment(this.content, userID, this.id);
     return a
   }
-  Like(userID:number){
-    let a = new Like("POST",userID,this.id);
+  Like(userID: number) {
+    let a = new Like("POST", userID, this.id);
     return a
   }
 }
@@ -127,7 +127,7 @@ export class Comment extends Model implements IComment {
     })
     return count
   }
-  Like(userID:number) {
+  Like(userID: number) {
     let a = new Like("COMMENT", userID, this.id);
     return a
   }
