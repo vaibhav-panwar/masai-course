@@ -119,12 +119,9 @@ function reset(){
     for(let i=0;i<inpArr.length;i++){
         inpArr[i].textContent = "";
         inpArr[i].classList.remove("disabled");
-        if (inpArr[i].classList.value != "grid-cell disabled x"){
-            inpArr[i].classList.remove("x");
-        }
-        else if (inpArr[i].classList.value != "grid-cell disabled o"){
-            inpArr[i].classList.remove("o");
-        }
+        inpArr[i].classList.remove("x");
+        inpArr[i].classList.remove("o");
+        console.log(inpArr[i].outerHTML);
     }
     document.querySelector(".game-over-text").textContent = "";
     xCheck =true;
