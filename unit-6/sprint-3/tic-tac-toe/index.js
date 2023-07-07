@@ -122,7 +122,7 @@ function reset(){
         if (inpArr[i].classList.value != "grid-cell disabled x"){
             inpArr[i].classList.remove("x");
         }
-        else{
+        else if (inpArr[i].classList.value != "grid-cell disabled o"){
             inpArr[i].classList.remove("o");
         }
     }
