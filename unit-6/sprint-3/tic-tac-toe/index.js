@@ -18,7 +18,7 @@ if (xCheck) {
 
 for (let i = 0; i < inpArr.length; i++) {
     inpArr[i].addEventListener('click', () => {
-        if (inpArr[i].classList.value != "grid-cell disabled x" && inpArr[i].classList.value != "grid-cell disabled o" ) {
+        if (inpArr[i].classList.value != "grid-cell disabled x" && inpArr[i].classList.value != "grid-cell disabled o" && inpArr[i].classList.value != "grid-cell disabled") {
             if (xCheck) {
                 inpArr[i].textContent = "X";
                 inpArr[i].classList.add("disabled");
@@ -44,7 +44,6 @@ for (let i = 0; i < inpArr.length; i++) {
                 for(let i=0;i<inpArr.length;i++){
                     if (inpArr[i].classList.value != "grid-cell disabled x" && inpArr[i].classList.value != "grid-cell disabled o"){
                         inpArr[i].classList.add("disabled");
-                        inpArr[i].classList.add("x");
                     }
                 }
             }
