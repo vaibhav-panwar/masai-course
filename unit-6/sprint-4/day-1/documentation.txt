@@ -1,0 +1,28 @@
+What is React?
+React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and efficiently update and render them when the underlying data changes. React follows a component-based architecture, where the UI is composed of independent and modular components that can be combined to create complex interfaces.
+
+Who made React?
+React was developed by Facebook. The initial version of React was created by Jordan Walke, a software engineer at Facebook, and it was first deployed on Facebook's newsfeed in 2011. React has since gained popularity and has been adopted by many other companies and developers worldwide.
+
+What is Babel?
+Babel is a popular JavaScript compiler. It is primarily used to convert ECMAScript 2015+ (ES6+) code into backward-compatible versions of JavaScript that can run in older environments. Babel enables developers to use modern JavaScript features and syntax while ensuring compatibility with older browsers or platforms that do not support these features natively.
+
+How does Babel convert HTML code in React into valid code?
+Babel is not directly responsible for converting HTML code into valid React code. Instead, Babel helps transform JSX (a syntax extension for JavaScript used in React) into regular JavaScript code that the browser can understand. JSX allows developers to write HTML-like code within JavaScript, making it easier to describe the structure and appearance of React components. Babel transforms JSX syntax into function calls that create and manipulate React elements.
+
+What is ReactDOM used for? Write an example.
+ReactDOM is a package in React that provides the glue between React components and the DOM (Document Object Model). It contains methods for rendering React elements into the DOM and managing updates to the rendered components.
+
+What are the packages that you need to import for React to work with?
+To work with React, you need to import two main packages:
+react: This package provides the core functionality of React, including the React object for creating components and working with JSX.
+react-dom: This package provides methods for rendering React components into the DOM and managing updates.
+
+What are the packages that you need to import for React to work with?
+To work with React, you need to import two main packages:
+react: This package provides the core functionality of React, including the React object for creating components and working with JSX.
+react-dom: This package provides methods for rendering React components into the DOM and managing updates.
+
+What is the meaning of "render" and "root"?
+Render: In the context of React, rendering refers to the process of generating the output (usually DOM elements) based on the React components and their current state and props. The ReactDOM.render() method is used to initiate the rendering process by taking a React element or component and mounting it into the DOM.
+Root: In React, the root is the entry point for the React application within the HTML document. It is typically a DOM element, identified by its unique ID, where the React components will be rendered. The ReactDOM.render() method specifies the root element where the React component tree should be rendered.
