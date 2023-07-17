@@ -9,11 +9,12 @@ function Card({ name, genere, actor, language, pics, averageReview, id }) {
       key={id}
     >
      <img src={pics} alt="" />
+      <Genere arr={genere} />
      <h1>{name}</h1>
      <p>Language: {language}</p>
      <p>Actor :{actor}</p>
      <h2>Ratings :{averageReview}</h2>
-     <Genere arr={genere}/>
+     
       <button><Link to={`/rate/${id}`}>Rate</Link></button>
     </div>
   );
