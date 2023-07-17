@@ -14,7 +14,7 @@ function Card({ name, genere, actor, language, pics, averageReview, id }) {
      <p>Actor :{actor}</p>
      <h2>Ratings :{averageReview}</h2>
      <Genere arr={genere}/>
-     <Link to={`/rate/${id}`}>Rate</Link>
+      <button><Link to={`/rate/${id}`}>Rate</Link></button>
     </div>
   );
 }
