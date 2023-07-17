@@ -12,7 +12,6 @@ function Pagination() {
       <button data-test-id="number-pagination">2</button>
       <button data-test-id="number-pagination">3</button>
       <button data-test-id="number-pagination">4</button>
-      <button data-test-id="number-pagination">5</button>
     </div>
   );
 }
