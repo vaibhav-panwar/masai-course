@@ -8,7 +8,11 @@ function Pagination() {
       {/* This is the button to switch to the next page */}
       <button data-test-id="next-pagination">Next</button>
       {/* This is the button that shows all the pages */}
-      <button data-test-id="number-pagination"></button>
+      <button data-test-id="number-pagination">1</button>
+      <button data-test-id="number-pagination">2</button>
+      <button data-test-id="number-pagination">3</button>
+      <button data-test-id="number-pagination">4</button>
+      <button data-test-id="number-pagination">5</button>
     </div>
   );
 }

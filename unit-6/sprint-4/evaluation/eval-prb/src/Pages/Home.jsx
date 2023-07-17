@@ -1,5 +1,7 @@
 import React ,{useEffect , useState} from "react";
 import Card from "../Components/Card";
+import Pagination from "../Components/Pagination";
+
 function Home() {
   let [data,setData] = useState([]);
   useEffect(()=>{
@@ -22,6 +24,7 @@ function Home() {
         }
       </div>
       {/* Here will come the Pagination component */}
+      <Pagination/>
     </>
   );
 }
