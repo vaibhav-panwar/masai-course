@@ -1,0 +1,743 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "name": "Gentlemen of Fortune (Dzhentlmeny udachi)",
+      "genere": [
+        "Comedy",
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "actor": "Horten",
+      "language": "Yiddish",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Wrecking Crew, The",
+      "genere": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Drama"
+      ],
+      "actor": "Henry",
+      "language": "Bosnian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Sweet Sweetback's Baadasssss Song",
+      "genere": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "actor": "Wyatan",
+      "language": "Oriya",
+      "noOfReviews": 3,
+      "averageReview": 4,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Fat Kid Rules the World",
+      "genere": [
+        "Comedy"
+      ],
+      "actor": "Jim",
+      "language": "Ndebele",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Make Like a Thief (Juokse kuin varas)",
+      "genere": [
+        "Comedy",
+        "Crime",
+        "Thriller"
+      ],
+      "actor": "Tallie",
+      "language": "Montenegrin",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Two English Girls (Les deux anglaises et le continent)",
+      "genere": [
+        "Drama",
+        "Romance"
+      ],
+      "actor": "Ferguson",
+      "language": "Telugu",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Bridge of San Luis Rey, The",
+      "genere": [
+        "Drama"
+      ],
+      "actor": "Frederick",
+      "language": "Hiri Motu",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Legal Eagles",
+      "genere": [
+        "Comedy",
+        "Crime",
+        "Romance"
+      ],
+      "actor": "Aldus",
+      "language": "English",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Andrew Dice Clay: Indestructible",
+      "genere": [
+        "Comedy"
+      ],
+      "actor": "Konstantine",
+      "language": "Hebrew",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 10,
+      "name": "It's All About Love",
+      "genere": [
+        "Drama",
+        "Romance",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "actor": "Jonathan",
+      "language": "Tamil",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 11,
+      "name": "Fargo",
+      "genere": [
+        "Comedy",
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "actor": "Vincenz",
+      "language": "Kashmiri",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 12,
+      "name": "The Adventures of Hercules",
+      "genere": [
+        "Comedy",
+        "Fantasy"
+      ],
+      "actor": "Buddie",
+      "language": "Thai",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Rebellion (L'ordre et la morale)",
+      "genere": [
+        "Action",
+        "Drama"
+      ],
+      "actor": "Kermie",
+      "language": "Maltese",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 14,
+      "name": "Annabel Takes a Tour (Annabel Takes a Trip)",
+      "genere": [
+        "Comedy"
+      ],
+      "actor": "Raymund",
+      "language": "Polish",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 15,
+      "name": "Big Squeeze, The",
+      "genere": [
+        "Comedy",
+        "Drama"
+      ],
+      "actor": "Shelden",
+      "language": "Zulu",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Sea Gull, The",
+      "genere": [
+        "Drama",
+        "Romance"
+      ],
+      "actor": "Emmit",
+      "language": "Polish",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 17,
+      "name": "Changing Times (Les temps qui changent)",
+      "genere": [
+        "Drama",
+        "Romance"
+      ],
+      "actor": "Gar",
+      "language": "West Frisian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Days of Heaven",
+      "genere": [
+        "Drama"
+      ],
+      "actor": "Brade",
+      "language": "Armenian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Where the Heart Is",
+      "genere": [
+        "Comedy",
+        "Drama"
+      ],
+      "actor": "Tod",
+      "language": "Lithuanian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 20,
+      "name": "Black Beauty",
+      "genere": [
+        "Children",
+        "Drama"
+      ],
+      "actor": "Dalton",
+      "language": "Kazakh",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 21,
+      "name": "File on Thelma Jordan, The",
+      "genere": [
+        "Crime",
+        "Drama",
+        "Film-Noir",
+        "Mystery"
+      ],
+      "actor": "Radcliffe",
+      "language": "Danish",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Next Best Thing, The",
+      "genere": [
+        "Comedy",
+        "Drama"
+      ],
+      "actor": "Francisco",
+      "language": "Fijian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 23,
+      "name": "Adventures of Tarzan",
+      "genere": [
+        "Action",
+        "Adventure"
+      ],
+      "actor": "Major",
+      "language": "Bulgarian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 24,
+      "name": "Southland Tales",
+      "genere": [
+        "Comedy",
+        "Drama",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "actor": "Drugi",
+      "language": "Tok Pisin",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 25,
+      "name": "$ (Dollars)",
+      "genere": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "actor": "Mattie",
+      "language": "Nepali",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 26,
+      "name": "Dark Knight Rises, The",
+      "genere": [
+        "Action",
+        "Adventure",
+        "Crime",
+        "IMAX"
+      ],
+      "actor": "Jon",
+      "language": "Norwegian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 27,
+      "name": "Curious George",
+      "genere": [
+        "Adventure",
+        "Animation",
+        "Children",
+        "Comedy"
+      ],
+      "actor": "Durward",
+      "language": "Somali",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 28,
+      "name": "Falling (a.k.a. Fallen)",
+      "genere": [
+        "Drama"
+      ],
+      "actor": "Cori",
+      "language": "Telugu",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 29,
+      "name": "Elementary Particles, The (Elementarteilchen)",
+      "genere": [
+        "Drama",
+        "Romance"
+      ],
+      "actor": "Berty",
+      "language": "Romanian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 30,
+      "name": "Cirque du Soleil: Worlds Away",
+      "genere": [
+        "Fantasy",
+        "IMAX"
+      ],
+      "actor": "Thornie",
+      "language": "Bulgarian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 31,
+      "name": "Kiss, The",
+      "genere": [
+        "Drama",
+        "Romance"
+      ],
+      "actor": "Giffy",
+      "language": "Tamil",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 32,
+      "name": "Agatha Christie's 'Ten Little Indians' (Ten Little Indians) (And Then There Were None)",
+      "genere": [
+        "Mystery"
+      ],
+      "actor": "Nickey",
+      "language": "Papiamento",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 33,
+      "name": "Dangerous Corner",
+      "genere": [
+        "Mystery"
+      ],
+      "actor": "Oran",
+      "language": "Kashmiri",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 34,
+      "name": "Flash Point (a.k.a. Flashpoint) (Dou fo sin)",
+      "genere": [
+        "Action"
+      ],
+      "actor": "Pace",
+      "language": "Finnish",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 35,
+      "name": "Armageddon (Armaguedon)",
+      "genere": [
+        "Crime",
+        "Thriller"
+      ],
+      "actor": "Cyrillus",
+      "language": "Hiri Motu",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 36,
+      "name": "Folks!",
+      "genere": [
+        "Comedy"
+      ],
+      "actor": "Cristobal",
+      "language": "Māori",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 37,
+      "name": "Bootmen",
+      "genere": [
+        "Comedy",
+        "Drama"
+      ],
+      "actor": "Matias",
+      "language": "Chinese",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 38,
+      "name": "Bliss (Mutluluk)",
+      "genere": [
+        "Drama"
+      ],
+      "actor": "Chico",
+      "language": "Korean",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 39,
+      "name": "Manhunter",
+      "genere": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Horror",
+        "Thriller"
+      ],
+      "actor": "Tomkin",
+      "language": "Punjabi",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 40,
+      "name": "Sunday",
+      "genere": [
+        "Drama",
+        "Romance"
+      ],
+      "actor": "Gerik",
+      "language": "Filipino",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 41,
+      "name": "Dreamchild",
+      "genere": [
+        "Drama",
+        "Fantasy",
+        "Romance"
+      ],
+      "actor": "Aloin",
+      "language": "Italian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 42,
+      "name": "Ring, The",
+      "genere": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "actor": "Bobby",
+      "language": "Zulu",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 43,
+      "name": "Cowspiracy: The Sustainability Secret",
+      "genere": [
+        "Adventure",
+        "Comedy",
+        "Documentary",
+        "Mystery"
+      ],
+      "actor": "Ferrel",
+      "language": "Armenian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 44,
+      "name": "Big Parade, The",
+      "genere": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "actor": "Norton",
+      "language": "Burmese",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 45,
+      "name": "My Life in Orange (Sommer in Orange)",
+      "genere": [
+        "Comedy"
+      ],
+      "actor": "Constantine",
+      "language": "Macedonian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 46,
+      "name": "Sleepy Time Gal, The",
+      "genere": [
+        "Drama"
+      ],
+      "actor": "Mose",
+      "language": "Telugu",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://assets-in.bmscdn.com/discovery-catalog/events/et00342025-xmwurtcqbv-landscape.jpg"
+    },
+    {
+      "id": 47,
+      "name": "Constantine",
+      "genere": [
+        "Action",
+        "Fantasy",
+        "Horror",
+        "Thriller"
+      ],
+      "actor": "Giordano",
+      "language": "Pashto",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 48,
+      "name": "Breaking and Entering",
+      "genere": [
+        "Comedy",
+        "Documentary"
+      ],
+      "actor": "Patric",
+      "language": "Macedonian",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    },
+    {
+      "id": 49,
+      "name": "Madame Butterfly",
+      "genere": [
+        "Musical"
+      ],
+      "actor": "Orson",
+      "language": "Luxembourgish",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2022/04/01/1600x900/RRR-Movie-Review_1648825470847_1648825479894.jpg"
+    },
+    {
+      "id": 50,
+      "name": "Brother's Kiss, A",
+      "genere": [
+        "Drama"
+      ],
+      "actor": "Nev",
+      "language": "Malagasy",
+      "noOfReviews": 0,
+      "averageReview": 0,
+      "pics": "https://images.hindustantimes.com/img/2023/01/25/1600x900/pathaan_movie_review_1674631292696_1674631292838_1674631292838.jpeg"
+    }
+  ],
+  "generes": [
+    {
+      "id": 0,
+      "name": "Comedy"
+    },
+    {
+      "id": 1,
+      "name": "Crime"
+    },
+    {
+      "id": 2,
+      "name": "Drama"
+    },
+    {
+      "id": 3,
+      "name": "Mystery"
+    },
+    {
+      "id": 4,
+      "name": "Action"
+    },
+    {
+      "id": 5,
+      "name": "Adventure"
+    },
+    {
+      "id": 6,
+      "name": "Thriller"
+    },
+    {
+      "id": 7,
+      "name": "Romance"
+    },
+    {
+      "id": 8,
+      "name": "Sci-Fi"
+    },
+    {
+      "id": 9,
+      "name": "Fantasy"
+    },
+    {
+      "id": 10,
+      "name": "Children"
+    },
+    {
+      "id": 11,
+      "name": "Film-Noir"
+    },
+    {
+      "id": 12,
+      "name": "IMAX"
+    },
+    {
+      "id": 13,
+      "name": "Animation"
+    },
+    {
+      "id": 14,
+      "name": "Horror"
+    },
+    {
+      "id": 15,
+      "name": "Documentary"
+    },
+    {
+      "id": 16,
+      "name": "War"
+    },
+    {
+      "id": 17,
+      "name": "Musical"
+    }
+  ]
+}
