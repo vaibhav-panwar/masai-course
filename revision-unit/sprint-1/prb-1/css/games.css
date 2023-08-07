@@ -1,0 +1,57 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav>a{
+    font-size: 20px;
+    text-decoration: none;
+}
+form {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wt {
+    text-align: center;
+    font-size: 25px;
+}
+
+.card {
+    background-color: aquamarine;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.stat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.homestat {
+    margin: 30px;
+}
+
+#prev {
+    width: 30px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+#next {
+    width: 30px;
+    font-size: 20px;
+    margin: 20px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/games.css">
+    <title>Games</title>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Players</a>
+        <a href="./games.html">Games</a>
+        <form>
+            <div>
+                <label for="startingdate">Enter starting date</label>
+                <input type="date" id="startingdate">
+            </div>
+            <div>
+                <label for="endingdate">Enter ending date</label>
+                <input type="date" id="endingdate" placeholder="Enter ending date">
+            </div>
+            <input type="submit">
+        </form>
+    </nav>
+    <div id="bigcont">
+    </div>
+    <div id="pagination">
+        <button id="prev"><</button>
+        <button id="next">></button>
+    </div>
+</body>
+<script src="./scripts/games.js"></script>
+</html>
