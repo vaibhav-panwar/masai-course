@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">Admin Login</a>
+        <a href="./dashboard.html">Dashboard</a>
+        <a href="./event.html">Events</a>
+    </nav>
+    <div id="bigcont">
+        <div id="events">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Poster</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Edit/Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div id="createform">
+            <form>
+                <h2>Enter Details</h2>
+                <input type="text" id="image" placeholder="Enter image">
+                <input type="text" id="name" placeholder="Enter name of event">
+                <input type="text" id="desc" placeholder="Enter event description">
+                <input type="date" id="date">
+                <input type="text" id="location" placeholder="Enter location">
+                <select name="category" id="category">
+                    <option value="Music">Music</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Workshop">Workshop</option>
+                </select>
+                <input type="number" id="price" placeholder="Enter price">
+                <input type="submit" id="sub">
+                <button id="clear">Clear Form</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="./scripts/dashboard.js"></script>
+
+</html>

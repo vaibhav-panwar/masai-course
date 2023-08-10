@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/event.css">
+    <title>Events</title>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Admin LogIn</a>
+        <a href="./event.html">Events</a>
+    </nav>
+    <div id="filter">
+        <select name="category" id="category">
+            <option value="">Select Category</option>
+            <option value="Music">Music</option>
+            <option value="Sports">Sports</option>
+            <option value="Workshop">Workshop</option>
+        </select>
+       <div id="sort">
+        <p>Sort by price:</p>
+        <div class="radio">
+            <label>Ascending</label>
+            <input type="radio" name="sort" class="sort" value="asc">
+        </div>
+        <div class="radio">
+            <label>Descending</label>
+            <input type="radio" name="sort" class="sort" value="desc">
+        </div>
+       </div>
+    </div>
+    <div id="bigcont">
+       
+    </div>
+</body>
+<script src="./scripts/event.js"></script>
+</html>
