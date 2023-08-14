@@ -12,11 +12,10 @@ app.use(express.json());
 app.use('/api',userRouter);
 app.use('/api',flightRoute);
 app.use("/api",bookinRoute);
-app.post('/',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send({
         isError:false,
-        message:"base point",
-        body:"jmd"
+        message:"base point"
     })
 })
 
