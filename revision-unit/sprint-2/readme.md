@@ -1,9 +1,9 @@
 <h1>Air Ticket Booking</h1>
 <h3> Deployed Link </h3>
-<a href = "https://airline-cipd.onrender.com">https://airline-cipd.onrender.com</a>
+<a href = "https://airline-cipd.onrender.com">https://airline-cipd.onrender.com </a>
 <h3>User Routes</h3>
 <h4>register</h4>
-<a href = "https://airline-cipd.onrender.com">https://airline-cipd.onrender.com/api/register">
+<a href = "https://airline-cipd.onrender.com">https://airline-cipd.onrender.com/api/register"
 </a>
 <p>request paramenters</p>
 <p>
@@ -22,7 +22,7 @@
   }
 </p>
 <h4>login</h4>
-<a href = "https://airline-cipd.onrender.com">https://airline-cipd.onrender.com/api/login">
+<a href = "https://airline-cipd.onrender.com">https://airline-cipd.onrender.com/api/login"
 </a>
 <p>request paramenters</p>
 <p>
@@ -41,7 +41,7 @@
 </p>
 <h3>User Routes</h3>
 <h4>flight details</h4>
-<a href = "https://airline-cipd.onrender.com">https://airline-cipd.onrender.com/api/flights">
+<a href = "https://airline-cipd.onrender.com">https://airline-cipd.onrender.com/api/flights"
 </a>
 <p>Output</p>
 <p>
