@@ -15,7 +15,8 @@ userRouter.post('/register', async (req,res) => {
             await newUser.save();
             res.status(201).send({
                 isError: false,
-                message: "new user created successfully"
+                message: "new user created successfully",
+                data:newUser
             })
         }
         else {
@@ -43,6 +44,7 @@ userRouter.post("/login", async (req, res) => {
                 res.status(201).send({
                     isError:false,
                     message:"login successfull",
+                    user,
                     token
                 })
             }
