@@ -1,3 +1,11 @@
+window.onload = oncheck();
+function oncheck(){
+    let a = localStorage.getItem("doctok");
+    if(!a){
+        alert("please login first")
+        window.location.href = "./index.html"
+    }
+}
 let cont = document.getElementById("cont");
 let patchid = null;
 let query = new URLSearchParams();
