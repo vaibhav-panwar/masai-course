@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+nav>a {
+    font-size: 20px;
+    text-decoration: none;
+}
+#btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+#btn>button{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    background-color: orange;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+#login,#signup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#login>input,#signup>input{
+    width: 200px;
+    height: 30px;
+    padding:5px;
+    font-size: 15px;
+    margin: 20px;
+}
+
+#bigcont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

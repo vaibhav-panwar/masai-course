@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/onboardDoctor.css">
+    <title>OnBoard Doctors</title>
+</head>
+<body>
+    <nav>
+        <a href="./index.html">Login/Signup</a>
+        <a href="./onboardDoctor.html">OnBoard Doctors</a>
+        <a href="./dashboard.html">Dashboard</a>
+    </nav>
+    <div id="bigcont">
+        <form>
+            <input type="text" placeholder="enter name" id="name">
+            <input type="text" placeholder="enter image" id="image">
+            <select name="special" id="special">
+                <option value="Cardiologist">Cardiologist</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <option value="Pediatrician">Pediatrician</option>
+                <option value="Psychiatrist">Psychiatrist</option>
+            </select>
+            <input type="number" placeholder="enter experience" id="exp">
+            <input type="text" placeholder="location" id="location">
+            <input type="date" id="date">
+            <input type="number" id="slot" placeholder="Enter slots">
+            <input type="number" id="fee" placeholder="Enter fee">
+            <input type="submit">
+        </form>
+    </div>
+</body>
+<script src="./scripts/onboardDoctor.js"></script>
+</html>
