@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/blogs.css">
+    <title>Blogs</title>
+</head>
+
+<body>
+    <nav>
+        <a href="./index.html">SignUp/LogIn</a>
+        <a href="./blogs.html">Blogs</a>
+    </nav>
+    <div id="filters">
+        <input type="text" id="srch" placeholder="search by title">
+        <select id="fcat">
+            <option value="">Search by Category</option>
+            <option value="Business">Business</option>
+            <option value="Tech">Tech</option>
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Entertainment">Entertainment</option>
+        </select>
+        <select id="sdate">
+            <option value="">Sort By Date</option>
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </select>
+        <button id="addb">Add Blog</button>
+    </div>
+    <div id="bigcont">
+        <div id="cont">
+
+        </div>
+        <div class="bform">
+            <form>
+                <input type="text" id="title" placeholder="Enter Title">
+                <textarea id="content" placeholder="Enter content" cols="30" rows="10"></textarea>
+                <select id="category">
+                    <option value="Business">Business</option>
+                    <option value="Tech">Tech</option>
+                    <option value="Lifestyle">Lifestyle</option>
+                    <option value="Entertainment">Entertainment</option>
+                </select>
+                <input type="submit" value="Post Blog">
+            </form>
+        </div>
+    </div>
+</body>
+<script src="./scripts/blogs.js"></script>
+
+</html>
